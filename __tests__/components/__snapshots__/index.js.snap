@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackButton renders correctly 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hasTVPreferredFocus={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+      },
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "justifyContent": "center",
+          "left": 0,
+          "minHeight": 42,
+          "minWidth": 50,
+          "position": "absolute",
+          "top": 22,
+          "zIndex": 9,
+        },
+        undefined,
+      ],
+    ]
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <View>
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": undefined,
+            "fontSize": 12,
+          },
+          Object {
+            "color": "#000",
+            "fontSize": 30,
+          },
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+        ]
+      }
+      virtual={undefined}
+    >
+      
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`ScoreBoard renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "flex-end",
+        "flexBasis": 0,
+        "flexDirection": "row",
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "marginBottom": 15,
+        "marginLeft": 15,
+        "marginRight": 15,
+        "marginTop": 15,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "stretch",
+          "flexBasis": 0,
+          "flexDirection": "row",
+          "flexGrow": 0.3,
+          "flexShrink": 1,
+          "justifyContent": "flex-start",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "alignSelf": "center",
+          "flex": 1,
+        }
+      }
+      virtual={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 10,
+            },
+            Object {
+              "color": "#000",
+            },
+          ]
+        }
+      >
+        TIME
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 48,
+            },
+            Object {
+              "color": "#000",
+            },
+          ]
+        }
+      >
+        10
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "stretch",
+          "flexBasis": 0,
+          "flexDirection": "row",
+          "flexGrow": 0.3,
+          "flexShrink": 1,
+          "justifyContent": "flex-start",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flex": 1,
+        }
+      }
+      virtual={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 10,
+            },
+            Object {
+              "color": "#000",
+            },
+          ]
+        }
+      >
+        LEVEL
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 48,
+            },
+            Object {
+              "color": "#000",
+            },
+          ]
+        }
+      >
+        01
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "stretch",
+          "flexBasis": 0,
+          "flexDirection": "row",
+          "flexGrow": 0.3,
+          "flexShrink": 1,
+          "justifyContent": "flex-start",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "alignSelf": "center",
+          "flex": 1,
+        }
+      }
+      virtual={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 10,
+            },
+            Object {
+              "color": "#000",
+            },
+          ]
+        }
+      >
+        SCORE
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 48,
+            },
+            Object {
+              "color": "#000",
+            },
+          ]
+        }
+      >
+        00
+      </Text>
+    </View>
+  </View>
+</View>
+`;

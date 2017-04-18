@@ -1,0 +1,72 @@
+body {
+  color: white;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background-image: url('../images/background.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+img {
+  max-width: 100%;
+}
+a img {
+  cursor: pointer;
+}
+h1 {
+  font-weight: 900;
+  font-size: 98px;
+}
+h2 {
+  font-size: 36px;
+}
+.wrap {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.text-container,
+.image-container {
+  text-align: center;
+  position: relative;
+  height: 100vh;
+}
+.text-wrap {
+}
+.text-wrap {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform:    translate(-50%, -50%);
+  -ms-transform:     translate(-50%, -50%);
+  -o-transform:      translate(-50%, -50%);
+  transform:         translate(-50%, -50%);
+}
+.image-container img {
+  max-height: 75vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform:    translate(-50%, -50%);
+  -ms-transform:     translate(-50%, -50%);
+  -o-transform:      translate(-50%, -50%);
+  transform:         translate(-50%, -50%);
+}
+@media (max-width: 748px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  .text-container,
+  .image-container {
+    height: 50vh;
+  }
+  .text-wrap {
+    width: 80%;
+  }
+  .image-container img {
+    max-height: 50vh;
+  }
+}
