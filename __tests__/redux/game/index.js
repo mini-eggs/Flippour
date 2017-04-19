@@ -13,18 +13,26 @@ function getStore() {
 
 test("Check nextLevel action", () => {
   const store = getStore();
-  for (var e = 0; e < 1000; e++) {
+  for (var e = 0; e < 100; e++) {
     expect(store.getState().GameReducer.level).toBe(e + 1);
     store.dispatch(GameActions.nextLevel());
+    const data = store.getState().GameReducer;
+    data.squares = null;
+    data.goal = null;
+    expect(data).toMatchSnapshot();
   }
 });
 
-test("Check if game time progresses", () => {
+test("Check if game time progresses manually", () => {
   const store = getStore();
   const initialTime = store.getState().GameReducer.time;
-  for (var e = 0; e < initialTime; e++) {
+  for (var e = 0; e < 100; e++) {
     expect(store.getState().GameReducer.time).toBe(initialTime - e);
     store.dispatch(GameActions.setTimer(initialTime - e - 1));
     expect(store.getState().GameReducer.time).not.toBe(initialTime);
+    const data = store.getState().GameReducer;
+    data.squares = null;
+    data.goal = null;
+    expect(data).toMatchSnapshot();
   }
 });

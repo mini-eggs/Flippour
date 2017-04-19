@@ -1,0 +1,2601 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check if game time progresses manually 1`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9999,
+}
+`;
+
+exports[`Check if game time progresses manually 2`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9998,
+}
+`;
+
+exports[`Check if game time progresses manually 3`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9997,
+}
+`;
+
+exports[`Check if game time progresses manually 4`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9996,
+}
+`;
+
+exports[`Check if game time progresses manually 5`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9995,
+}
+`;
+
+exports[`Check if game time progresses manually 6`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9994,
+}
+`;
+
+exports[`Check if game time progresses manually 7`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9993,
+}
+`;
+
+exports[`Check if game time progresses manually 8`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9992,
+}
+`;
+
+exports[`Check if game time progresses manually 9`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9991,
+}
+`;
+
+exports[`Check if game time progresses manually 10`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9990,
+}
+`;
+
+exports[`Check if game time progresses manually 11`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9989,
+}
+`;
+
+exports[`Check if game time progresses manually 12`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9988,
+}
+`;
+
+exports[`Check if game time progresses manually 13`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9987,
+}
+`;
+
+exports[`Check if game time progresses manually 14`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9986,
+}
+`;
+
+exports[`Check if game time progresses manually 15`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9985,
+}
+`;
+
+exports[`Check if game time progresses manually 16`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9984,
+}
+`;
+
+exports[`Check if game time progresses manually 17`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9983,
+}
+`;
+
+exports[`Check if game time progresses manually 18`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9982,
+}
+`;
+
+exports[`Check if game time progresses manually 19`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9981,
+}
+`;
+
+exports[`Check if game time progresses manually 20`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9980,
+}
+`;
+
+exports[`Check if game time progresses manually 21`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9979,
+}
+`;
+
+exports[`Check if game time progresses manually 22`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9978,
+}
+`;
+
+exports[`Check if game time progresses manually 23`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9977,
+}
+`;
+
+exports[`Check if game time progresses manually 24`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9976,
+}
+`;
+
+exports[`Check if game time progresses manually 25`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9975,
+}
+`;
+
+exports[`Check if game time progresses manually 26`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9974,
+}
+`;
+
+exports[`Check if game time progresses manually 27`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9973,
+}
+`;
+
+exports[`Check if game time progresses manually 28`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9972,
+}
+`;
+
+exports[`Check if game time progresses manually 29`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9971,
+}
+`;
+
+exports[`Check if game time progresses manually 30`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9970,
+}
+`;
+
+exports[`Check if game time progresses manually 31`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9969,
+}
+`;
+
+exports[`Check if game time progresses manually 32`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9968,
+}
+`;
+
+exports[`Check if game time progresses manually 33`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9967,
+}
+`;
+
+exports[`Check if game time progresses manually 34`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9966,
+}
+`;
+
+exports[`Check if game time progresses manually 35`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9965,
+}
+`;
+
+exports[`Check if game time progresses manually 36`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9964,
+}
+`;
+
+exports[`Check if game time progresses manually 37`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9963,
+}
+`;
+
+exports[`Check if game time progresses manually 38`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9962,
+}
+`;
+
+exports[`Check if game time progresses manually 39`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9961,
+}
+`;
+
+exports[`Check if game time progresses manually 40`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9960,
+}
+`;
+
+exports[`Check if game time progresses manually 41`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9959,
+}
+`;
+
+exports[`Check if game time progresses manually 42`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9958,
+}
+`;
+
+exports[`Check if game time progresses manually 43`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9957,
+}
+`;
+
+exports[`Check if game time progresses manually 44`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9956,
+}
+`;
+
+exports[`Check if game time progresses manually 45`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9955,
+}
+`;
+
+exports[`Check if game time progresses manually 46`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9954,
+}
+`;
+
+exports[`Check if game time progresses manually 47`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9953,
+}
+`;
+
+exports[`Check if game time progresses manually 48`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9952,
+}
+`;
+
+exports[`Check if game time progresses manually 49`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9951,
+}
+`;
+
+exports[`Check if game time progresses manually 50`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9950,
+}
+`;
+
+exports[`Check if game time progresses manually 51`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9949,
+}
+`;
+
+exports[`Check if game time progresses manually 52`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9948,
+}
+`;
+
+exports[`Check if game time progresses manually 53`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9947,
+}
+`;
+
+exports[`Check if game time progresses manually 54`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9946,
+}
+`;
+
+exports[`Check if game time progresses manually 55`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9945,
+}
+`;
+
+exports[`Check if game time progresses manually 56`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9944,
+}
+`;
+
+exports[`Check if game time progresses manually 57`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9943,
+}
+`;
+
+exports[`Check if game time progresses manually 58`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9942,
+}
+`;
+
+exports[`Check if game time progresses manually 59`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9941,
+}
+`;
+
+exports[`Check if game time progresses manually 60`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9940,
+}
+`;
+
+exports[`Check if game time progresses manually 61`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9939,
+}
+`;
+
+exports[`Check if game time progresses manually 62`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9938,
+}
+`;
+
+exports[`Check if game time progresses manually 63`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9937,
+}
+`;
+
+exports[`Check if game time progresses manually 64`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9936,
+}
+`;
+
+exports[`Check if game time progresses manually 65`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9935,
+}
+`;
+
+exports[`Check if game time progresses manually 66`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9934,
+}
+`;
+
+exports[`Check if game time progresses manually 67`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9933,
+}
+`;
+
+exports[`Check if game time progresses manually 68`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9932,
+}
+`;
+
+exports[`Check if game time progresses manually 69`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9931,
+}
+`;
+
+exports[`Check if game time progresses manually 70`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9930,
+}
+`;
+
+exports[`Check if game time progresses manually 71`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9929,
+}
+`;
+
+exports[`Check if game time progresses manually 72`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9928,
+}
+`;
+
+exports[`Check if game time progresses manually 73`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9927,
+}
+`;
+
+exports[`Check if game time progresses manually 74`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9926,
+}
+`;
+
+exports[`Check if game time progresses manually 75`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9925,
+}
+`;
+
+exports[`Check if game time progresses manually 76`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9924,
+}
+`;
+
+exports[`Check if game time progresses manually 77`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9923,
+}
+`;
+
+exports[`Check if game time progresses manually 78`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9922,
+}
+`;
+
+exports[`Check if game time progresses manually 79`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9921,
+}
+`;
+
+exports[`Check if game time progresses manually 80`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9920,
+}
+`;
+
+exports[`Check if game time progresses manually 81`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9919,
+}
+`;
+
+exports[`Check if game time progresses manually 82`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9918,
+}
+`;
+
+exports[`Check if game time progresses manually 83`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9917,
+}
+`;
+
+exports[`Check if game time progresses manually 84`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9916,
+}
+`;
+
+exports[`Check if game time progresses manually 85`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9915,
+}
+`;
+
+exports[`Check if game time progresses manually 86`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9914,
+}
+`;
+
+exports[`Check if game time progresses manually 87`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9913,
+}
+`;
+
+exports[`Check if game time progresses manually 88`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9912,
+}
+`;
+
+exports[`Check if game time progresses manually 89`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9911,
+}
+`;
+
+exports[`Check if game time progresses manually 90`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9910,
+}
+`;
+
+exports[`Check if game time progresses manually 91`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9909,
+}
+`;
+
+exports[`Check if game time progresses manually 92`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9908,
+}
+`;
+
+exports[`Check if game time progresses manually 93`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9907,
+}
+`;
+
+exports[`Check if game time progresses manually 94`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9906,
+}
+`;
+
+exports[`Check if game time progresses manually 95`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9905,
+}
+`;
+
+exports[`Check if game time progresses manually 96`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9904,
+}
+`;
+
+exports[`Check if game time progresses manually 97`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9903,
+}
+`;
+
+exports[`Check if game time progresses manually 98`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9902,
+}
+`;
+
+exports[`Check if game time progresses manually 99`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9901,
+}
+`;
+
+exports[`Check if game time progresses manually 100`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 1,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9900,
+}
+`;
+
+exports[`Check nextLevel action 1`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 2,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 10000,
+}
+`;
+
+exports[`Check nextLevel action 2`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 3,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 10000,
+}
+`;
+
+exports[`Check nextLevel action 3`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 4,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 10000,
+}
+`;
+
+exports[`Check nextLevel action 4`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 5,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 10000,
+}
+`;
+
+exports[`Check nextLevel action 5`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 6,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 10000,
+}
+`;
+
+exports[`Check nextLevel action 6`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 7,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 10000,
+}
+`;
+
+exports[`Check nextLevel action 7`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 8,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 10000,
+}
+`;
+
+exports[`Check nextLevel action 8`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 9,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 10000,
+}
+`;
+
+exports[`Check nextLevel action 9`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 10,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 10000,
+}
+`;
+
+exports[`Check nextLevel action 10`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 11,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9000,
+}
+`;
+
+exports[`Check nextLevel action 11`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 12,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9000,
+}
+`;
+
+exports[`Check nextLevel action 12`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 13,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9000,
+}
+`;
+
+exports[`Check nextLevel action 13`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 14,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9000,
+}
+`;
+
+exports[`Check nextLevel action 14`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 15,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9000,
+}
+`;
+
+exports[`Check nextLevel action 15`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 16,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9000,
+}
+`;
+
+exports[`Check nextLevel action 16`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 17,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9000,
+}
+`;
+
+exports[`Check nextLevel action 17`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 18,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9000,
+}
+`;
+
+exports[`Check nextLevel action 18`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 19,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9000,
+}
+`;
+
+exports[`Check nextLevel action 19`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 20,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 9000,
+}
+`;
+
+exports[`Check nextLevel action 20`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 21,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 8000,
+}
+`;
+
+exports[`Check nextLevel action 21`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 22,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 8000,
+}
+`;
+
+exports[`Check nextLevel action 22`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 23,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 8000,
+}
+`;
+
+exports[`Check nextLevel action 23`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 24,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 8000,
+}
+`;
+
+exports[`Check nextLevel action 24`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 25,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 8000,
+}
+`;
+
+exports[`Check nextLevel action 25`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 26,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 8000,
+}
+`;
+
+exports[`Check nextLevel action 26`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 27,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 8000,
+}
+`;
+
+exports[`Check nextLevel action 27`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 28,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 8000,
+}
+`;
+
+exports[`Check nextLevel action 28`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 29,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 8000,
+}
+`;
+
+exports[`Check nextLevel action 29`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 30,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 8000,
+}
+`;
+
+exports[`Check nextLevel action 30`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 31,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 7000,
+}
+`;
+
+exports[`Check nextLevel action 31`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 32,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 7000,
+}
+`;
+
+exports[`Check nextLevel action 32`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 33,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 7000,
+}
+`;
+
+exports[`Check nextLevel action 33`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 34,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 7000,
+}
+`;
+
+exports[`Check nextLevel action 34`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 35,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 7000,
+}
+`;
+
+exports[`Check nextLevel action 35`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 36,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 7000,
+}
+`;
+
+exports[`Check nextLevel action 36`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 37,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 7000,
+}
+`;
+
+exports[`Check nextLevel action 37`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 38,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 7000,
+}
+`;
+
+exports[`Check nextLevel action 38`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 39,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 7000,
+}
+`;
+
+exports[`Check nextLevel action 39`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 40,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 7000,
+}
+`;
+
+exports[`Check nextLevel action 40`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 41,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 6000,
+}
+`;
+
+exports[`Check nextLevel action 41`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 42,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 6000,
+}
+`;
+
+exports[`Check nextLevel action 42`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 43,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 6000,
+}
+`;
+
+exports[`Check nextLevel action 43`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 44,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 6000,
+}
+`;
+
+exports[`Check nextLevel action 44`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 45,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 6000,
+}
+`;
+
+exports[`Check nextLevel action 45`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 46,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 6000,
+}
+`;
+
+exports[`Check nextLevel action 46`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 47,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 6000,
+}
+`;
+
+exports[`Check nextLevel action 47`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 48,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 6000,
+}
+`;
+
+exports[`Check nextLevel action 48`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 49,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 6000,
+}
+`;
+
+exports[`Check nextLevel action 49`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 50,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 6000,
+}
+`;
+
+exports[`Check nextLevel action 50`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 51,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 5000,
+}
+`;
+
+exports[`Check nextLevel action 51`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 52,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 5000,
+}
+`;
+
+exports[`Check nextLevel action 52`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 53,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 5000,
+}
+`;
+
+exports[`Check nextLevel action 53`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 54,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 5000,
+}
+`;
+
+exports[`Check nextLevel action 54`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 55,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 5000,
+}
+`;
+
+exports[`Check nextLevel action 55`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 56,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 5000,
+}
+`;
+
+exports[`Check nextLevel action 56`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 57,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 5000,
+}
+`;
+
+exports[`Check nextLevel action 57`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 58,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 5000,
+}
+`;
+
+exports[`Check nextLevel action 58`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 59,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 5000,
+}
+`;
+
+exports[`Check nextLevel action 59`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 60,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 5000,
+}
+`;
+
+exports[`Check nextLevel action 60`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 61,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 4000,
+}
+`;
+
+exports[`Check nextLevel action 61`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 62,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 4000,
+}
+`;
+
+exports[`Check nextLevel action 62`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 63,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 4000,
+}
+`;
+
+exports[`Check nextLevel action 63`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 64,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 4000,
+}
+`;
+
+exports[`Check nextLevel action 64`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 65,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 4000,
+}
+`;
+
+exports[`Check nextLevel action 65`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 66,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 4000,
+}
+`;
+
+exports[`Check nextLevel action 66`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 67,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 4000,
+}
+`;
+
+exports[`Check nextLevel action 67`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 68,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 4000,
+}
+`;
+
+exports[`Check nextLevel action 68`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 69,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 4000,
+}
+`;
+
+exports[`Check nextLevel action 69`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 70,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 4000,
+}
+`;
+
+exports[`Check nextLevel action 70`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 71,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 3000,
+}
+`;
+
+exports[`Check nextLevel action 71`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 72,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 3000,
+}
+`;
+
+exports[`Check nextLevel action 72`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 73,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 3000,
+}
+`;
+
+exports[`Check nextLevel action 73`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 74,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 3000,
+}
+`;
+
+exports[`Check nextLevel action 74`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 75,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 3000,
+}
+`;
+
+exports[`Check nextLevel action 75`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 76,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 3000,
+}
+`;
+
+exports[`Check nextLevel action 76`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 77,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 3000,
+}
+`;
+
+exports[`Check nextLevel action 77`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 78,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 3000,
+}
+`;
+
+exports[`Check nextLevel action 78`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 79,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 3000,
+}
+`;
+
+exports[`Check nextLevel action 79`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 80,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 3000,
+}
+`;
+
+exports[`Check nextLevel action 80`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 81,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 2000,
+}
+`;
+
+exports[`Check nextLevel action 81`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 82,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 2000,
+}
+`;
+
+exports[`Check nextLevel action 82`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 83,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 2000,
+}
+`;
+
+exports[`Check nextLevel action 83`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 84,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 2000,
+}
+`;
+
+exports[`Check nextLevel action 84`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 85,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 2000,
+}
+`;
+
+exports[`Check nextLevel action 85`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 86,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 2000,
+}
+`;
+
+exports[`Check nextLevel action 86`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 87,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 2000,
+}
+`;
+
+exports[`Check nextLevel action 87`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 88,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 2000,
+}
+`;
+
+exports[`Check nextLevel action 88`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 89,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 2000,
+}
+`;
+
+exports[`Check nextLevel action 89`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 90,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 2000,
+}
+`;
+
+exports[`Check nextLevel action 90`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 91,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 1000,
+}
+`;
+
+exports[`Check nextLevel action 91`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 92,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 1000,
+}
+`;
+
+exports[`Check nextLevel action 92`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 93,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 1000,
+}
+`;
+
+exports[`Check nextLevel action 93`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 94,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 1000,
+}
+`;
+
+exports[`Check nextLevel action 94`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 95,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 1000,
+}
+`;
+
+exports[`Check nextLevel action 95`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 96,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 1000,
+}
+`;
+
+exports[`Check nextLevel action 96`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 97,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 1000,
+}
+`;
+
+exports[`Check nextLevel action 97`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 98,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 1000,
+}
+`;
+
+exports[`Check nextLevel action 98`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 99,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 1000,
+}
+`;
+
+exports[`Check nextLevel action 99`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 100,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 1000,
+}
+`;
+
+exports[`Check nextLevel action 100`] = `
+Object {
+  "complete": false,
+  "fail": false,
+  "goal": null,
+  "level": 101,
+  "score": 0,
+  "speed": 1000,
+  "squares": null,
+  "time": 0,
+}
+`;
