@@ -11,7 +11,7 @@ export function nextLevel() {
   };
 }
 
-function setTimer(time) {
+export function setTimer(time) {
   return {
     type: "SET_TIMER",
     payload: { time: time }
