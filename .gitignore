@@ -1,8 +1,6 @@
 android/.gradle/gradle.properties
 android/gradle.properties
 android/app/flippour-release-key.keystore
-src/keys/
-src/keys
 src/keys/index.js
 
 # OSX
