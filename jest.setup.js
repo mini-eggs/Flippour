@@ -16,6 +16,7 @@ jest.mock("Linking", () => {
  */
 global.addEventListener = jest.fn();
 global.attachEvent = jest.fn();
+global.cancelAnimationFrame = jest.fn();
 
 /**
  * Turn of console.warn for useNativeDriver

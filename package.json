@@ -30,10 +30,10 @@
 	},
 	"devDependencies": {
 		"babel-jest": "19.0.0",
-		"jest": "19.0.2",
-		"react-test-renderer": "16.0.0-alpha.6",
 		"babel-preset-react-native": "1.9.1",
-		"prettier": "^1.1.0"
+		"jest": "19.0.2",
+		"prettier": "^1.1.0",
+		"react-test-renderer": "16.0.0-alpha.6"
 	},
 	"jest": {
 		"preset": "react-native",

@@ -1,5 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AnimatedSquare - change clicked status and check if animating 1`] = `
+<View
+  renderToHardwareTextureAndroid={true}
+  shouldRasterizeIOS={true}
+  style={
+    Object {
+      "backgroundColor": "purple",
+      "borderRadius": 10,
+      "flex": 1,
+      "margin": 4,
+      "opacity": 0,
+      "transform": Array [
+        Object {
+          "scale": 0.5,
+        },
+        Object {
+          "rotateY": "-90deg",
+        },
+        Object {
+          "perspective": 1000,
+        },
+      ],
+    }
+  }
+/>
+`;
+
+exports[`AnimatedSquare - change clicked status and check if animating 2`] = `
+<View
+  renderToHardwareTextureAndroid={true}
+  shouldRasterizeIOS={true}
+  style={
+    Object {
+      "backgroundColor": "purple",
+      "borderRadius": 10,
+      "flex": 1,
+      "margin": 4,
+      "opacity": 0,
+      "transform": Array [
+        Object {
+          "scale": 0.5,
+        },
+        Object {
+          "rotateY": "-90deg",
+        },
+        Object {
+          "perspective": 1000,
+        },
+      ],
+    }
+  }
+/>
+`;
+
+exports[`AnimatedSquare - change color and complete level and check if new level started 1`] = `
+<View
+  renderToHardwareTextureAndroid={true}
+  shouldRasterizeIOS={true}
+  style={
+    Object {
+      "backgroundColor": "blue",
+      "borderRadius": 10,
+      "flex": 1,
+      "margin": 4,
+      "opacity": 0,
+      "transform": Array [
+        Object {
+          "scale": 0.5,
+        },
+        Object {
+          "rotateY": "-90deg",
+        },
+        Object {
+          "perspective": 1000,
+        },
+      ],
+    }
+  }
+/>
+`;
+
+exports[`AnimatedSquare - change color and complete level and check if new level started 2`] = `
+<View
+  renderToHardwareTextureAndroid={true}
+  shouldRasterizeIOS={true}
+  style={
+    Object {
+      "backgroundColor": "orange",
+      "borderRadius": 10,
+      "flex": 1,
+      "margin": 4,
+      "opacity": 0,
+      "transform": Array [
+        Object {
+          "scale": 0.5,
+        },
+        Object {
+          "rotateY": "-90deg",
+        },
+        Object {
+          "perspective": 1000,
+        },
+      ],
+    }
+  }
+/>
+`;
+
 exports[`AnimatedSquare renders correctly 1`] = `
 <View
   renderToHardwareTextureAndroid={true}
@@ -29,44 +137,166 @@ exports[`AnimatedSquare renders correctly 1`] = `
 
 exports[`GameScene renders correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
-  isTVSelectable={true}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
   style={
     Array [
       Object {
-        "backgroundColor": "transparent",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
       },
-      Array [
-        Object {
-          "flexBasis": 0,
-          "flexGrow": 1,
-          "flexShrink": 1,
-        },
-        undefined,
-      ],
+      Object {
+        "backgroundColor": "#f1f1f1",
+      },
     ]
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
       Array [
         Object {
+          "alignItems": "center",
           "flexBasis": 0,
-          "flexGrow": 1,
+          "flexDirection": "row",
+          "flexGrow": 0.25,
+          "flexShrink": 1,
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "fontSize": 48,
+            "marginTop": 22,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#000",
+          },
+        ]
+      }
+    >
+      BLUE
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 0.5,
+          "flexShrink": 1,
+          "marginBottom": 1.25,
+          "marginLeft": 1.25,
+          "marginRight": 1.25,
+          "marginTop": 1.25,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexDirection": "row",
+            "flexGrow": 1,
+            "flexShrink": 1,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Array [
+              Object {
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+              },
+              undefined,
+            ],
+          ]
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            renderToHardwareTextureAndroid={true}
+            shouldRasterizeIOS={true}
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "borderRadius": 10,
+                "flex": 1,
+                "margin": 4,
+                "opacity": 0,
+                "transform": Array [
+                  Object {
+                    "scale": 0.5,
+                  },
+                  Object {
+                    "rotateY": "-90deg",
+                  },
+                  Object {
+                    "perspective": 1000,
+                  },
+                ],
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 0.25,
           "flexShrink": 1,
         },
         undefined,
@@ -74,29 +304,213 @@ exports[`GameScene renders correctly 1`] = `
     }
   >
     <View
-      renderToHardwareTextureAndroid={true}
-      shouldRasterizeIOS={true}
       style={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 10,
-          "flex": 1,
-          "margin": 4,
-          "opacity": 0,
-          "transform": Array [
-            Object {
-              "scale": 0.5,
-            },
-            Object {
-              "rotateY": "-90deg",
-            },
-            Object {
-              "perspective": 1000,
-            },
-          ],
-        }
+        Array [
+          Object {
+            "alignItems": "flex-end",
+            "flexBasis": 0,
+            "flexDirection": "row",
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "marginBottom": 15,
+            "marginLeft": 15,
+            "marginRight": 15,
+            "marginTop": 15,
+          },
+          undefined,
+        ]
       }
-    />
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "stretch",
+              "flexBasis": 0,
+              "flexDirection": "row",
+              "flexGrow": 0.3,
+              "flexShrink": 1,
+              "justifyContent": "flex-start",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "alignSelf": "center",
+              "flex": 1,
+            }
+          }
+          virtual={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 10,
+                },
+                Object {
+                  "color": "#000",
+                },
+              ]
+            }
+          >
+            TIME
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 48,
+                },
+                Object {
+                  "color": "#000",
+                },
+              ]
+            }
+          >
+            10
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "stretch",
+              "flexBasis": 0,
+              "flexDirection": "row",
+              "flexGrow": 0.3,
+              "flexShrink": 1,
+              "justifyContent": "flex-start",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "flex": 1,
+            }
+          }
+          virtual={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 10,
+                },
+                Object {
+                  "color": "#000",
+                },
+              ]
+            }
+          >
+            LEVEL
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 48,
+                },
+                Object {
+                  "color": "#000",
+                },
+              ]
+            }
+          >
+            01
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "stretch",
+              "flexBasis": 0,
+              "flexDirection": "row",
+              "flexGrow": 0.3,
+              "flexShrink": 1,
+              "justifyContent": "flex-start",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "alignSelf": "center",
+              "flex": 1,
+            }
+          }
+          virtual={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 10,
+                },
+                Object {
+                  "color": "#000",
+                },
+              ]
+            }
+          >
+            SCORE
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontSize": 48,
+                },
+                Object {
+                  "color": "#000",
+                },
+              ]
+            }
+          >
+            00
+          </Text>
+        </View>
+      </View>
+    </View>
   </View>
 </View>
 `;
