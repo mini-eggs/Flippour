@@ -1,3 +1,4 @@
+// @flow
 import React, { PureComponent } from "react";
 import { Content, Text, Picker, Form, Item, Input } from "native-base";
 import { AndroidBackDecorator } from "../../decorators/androidBack";
@@ -5,17 +6,21 @@ import { InfoDecorator } from "../../decorators/info";
 import { SettingsDecorator } from "../../decorators/settings";
 import { SettingsContainer, Button, Span, Center, Space } from "./styles";
 
+type InitialProps = {
+  sounds: Object
+};
+
 @SettingsDecorator()
 @AndroidBackDecorator()
 @InfoDecorator()
-export class SettingsScene extends PureComponent {
+export class SettingsScene extends PureComponent<InitialProps, any, any> {
   state = { username: "" };
 
-  onValueChange = selected => {
+  onValueChange = (selected: string) => {
     // change theme value in store
   };
 
-  onUsernameChange = text => {
+  onUsernameChange = (text: string) => {
     this.setState(() => {
       return { username: text.replace(" ", "").toUpperCase() };
     });
