@@ -1,6 +1,15 @@
 // @flow
 import React, { PureComponent } from "react";
-import { Content, Text, Picker, Form, Item, Input } from "native-base";
+import {
+  Content,
+  Text,
+  Picker,
+  Form,
+  Item,
+  Input,
+  ListItem,
+  CheckBox
+} from "native-base";
 import { AndroidBackDecorator } from "../../decorators/androidBack";
 import { InfoDecorator } from "../../decorators/info";
 import { SettingsDecorator } from "../../decorators/settings";
@@ -26,10 +35,15 @@ export class SettingsScene extends PureComponent<InitialProps, any, any> {
     });
   };
 
+  onCheckboxChange = () => {
+    alert("clicked");
+  };
+
   render() {
     const { container, button, buttonText, text } = this.props.settings.theme;
     // test data
     const options = ["Dark", "Light", "Oceanic", "Solarized"];
+    const soundsEnabled = true;
 
     return (
       <Content style={container}>
@@ -39,6 +53,7 @@ export class SettingsScene extends PureComponent<InitialProps, any, any> {
             Theme
           </Span>
           <Picker
+            textStyle={Object.assign({}, text, { fontSize: 20 })}
             iosHeader="Select one"
             mode="dropdown"
             selectedValue={options[1]}
@@ -65,6 +80,18 @@ export class SettingsScene extends PureComponent<InitialProps, any, any> {
               />
             </Item>
           </Form>
+
+          <Space />
+
+          <Span style={[text, { textAlign: "left" }]}>
+            Sounds
+          </Span>
+          <ListItem style={{ borderColor: "transparent" }}>
+            <CheckBox onPress={this.onCheckboxChange} checked={soundsEnabled} />
+            <Span style={[text, { textAlign: "left", marginLeft: 15 }]}>
+              {soundsEnabled ? "Enabled" : "Disabled"}
+            </Span>
+          </ListItem>
 
           <Space />
           <Space />

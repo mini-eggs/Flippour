@@ -9,6 +9,7 @@ Flippour starts with ten seconds to complete each level. Each ten levels the tim
 1. Settings scene
       * User info
       * Theme info
+      * Enable/disable sounds
 2. Game over scene
       * Full page modal
       * User enter three letter name - also available on settings scene

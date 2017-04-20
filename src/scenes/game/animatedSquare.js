@@ -5,7 +5,6 @@ import { Animated } from "react-native";
 import {
   sequence,
   parallel,
-  setAnimating,
   AnimatedView,
   animate
 } from "./animatedSquare.utilities";
@@ -21,8 +20,9 @@ const initial = {
 };
 
 export class AnimatedSquare extends PureComponent {
+  animating = false;
+
   state = {
-    animating: false,
     opacity: new Animated.Value(initial.opacity),
     scale: new Animated.Value(initial.scale),
     rotate: new Animated.Value(initial.rotate)
@@ -113,25 +113,35 @@ export class AnimatedSquare extends PureComponent {
       (!clicked && !complete && !fail)
     ) {
       // new level & new color
-      this.setState(setAnimating(false), this.levelBegin().start);
+      this.animating = false;
+      this.levelBegin().start();
     } else if (fail && !this.props.clicked && clicked) {
       // fail & last square chosen
-      this.setState(setAnimating(true), this.incorrect().start);
+      this.animating = true;
+      this.incorrect().start();
+      // why are we doing this?
+      // to ensure we auto back on game over
+      this.setState(state => state);
     } else if (fail) {
       // fail
-      this.setState(setAnimating(true), this.fadeOut().start);
+      this.animating = true;
+      this.fadeOut().start();
     } else if (complete && !this.props.clicked && clicked) {
       // complete & last square chosen
-      this.setState(setAnimating(true), this.correct().start);
-    } else if (complete && !this.state.animating) {
+      this.animating = true;
+      this.correct().start();
+    } else if (complete && !this.animating) {
       // complete
-      this.setState(setAnimating(true), this.fadeOut().start);
-    } else if (clicked && status && !this.state.animating) {
+      this.animating = true;
+      this.fadeOut().start();
+    } else if (clicked && status && !this.animating) {
       // correct
-      this.setState(setAnimating(true), this.correct().start);
-    } else if (clicked && !status && !this.state.animating) {
+      this.animating = true;
+      this.correct().start();
+    } else if (clicked && !status && !this.animating) {
       // incorrect
-      this.setState(setAnimating(true), this.incorrect().start);
+      this.animating = true;
+      this.incorrect().start();
     }
   };
 

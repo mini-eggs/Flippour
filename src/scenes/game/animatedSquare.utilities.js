@@ -5,10 +5,6 @@ import { Animated, View, Platform } from "react-native";
 
 export const { parallel, sequence } = Animated;
 
-export function setAnimating(status: boolean) {
-  return { animating: status };
-}
-
 type AnimatedViewType = {
   style: Object
 };
