@@ -9,13 +9,6 @@
     hoist-non-react-statics "^1.2.0"
     lodash "^4.15.0"
 
-"@shoutem/theme@https://github.com/GeekyAnts/theme#caching":
-  version "0.8.8"
-  resolved "https://github.com/GeekyAnts/theme#7c8d0ab19eb452c8c465bbd8e27f8cdc32fddba5"
-  dependencies:
-    hoist-non-react-statics "^1.0.5"
-    lodash "^4.10.1"
-
 abab@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.3.tgz#b81de5f7274ec4e756d797cd834f303642724e5d"
@@ -2912,17 +2905,24 @@ mute-stream@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
 
-native-base@^2.0.13:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/native-base/-/native-base-2.1.1.tgz#c7f22bf29ca3b734923314e8c481116724d39971"
+native-base-shoutem-theme@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/native-base-shoutem-theme/-/native-base-shoutem-theme-0.1.0.tgz#412ca5f46f4cd3b93ef7785024cb0ef7700c336a"
+  dependencies:
+    hoist-non-react-statics "^1.0.5"
+    lodash "^4.10.1"
+
+native-base@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/native-base/-/native-base-2.1.2.tgz#5bb5a516b86b422ffa413953ffd00b7ebe204e71"
   dependencies:
     "@shoutem/animation" "^0.8.9"
-    "@shoutem/theme" "https://github.com/GeekyAnts/theme#caching"
     blueimp-md5 "^2.5.0"
     clamp "^1.0.1"
     color "~0.11.1"
     fs-extra "^2.0.0"
     lodash "~4.11.1"
+    native-base-shoutem-theme "0.1.0"
     print-message "^2.1.0"
     react-native-drawer "^2.3.0"
     react-native-easy-grid "0.1.7"

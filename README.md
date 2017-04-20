@@ -14,7 +14,10 @@ Flippour starts with ten seconds to complete each level. Each ten levels the tim
       * User enter three letter name - also available on settings scene
 3. Sounds
       * Square click correct/incorrect
-      * Level complete/game over sound
+      * Level complete/game over
+4. Incremental difficulty
+      * Bonus levels
+      * level progression will change
 
 #### iOS Screenshots
 

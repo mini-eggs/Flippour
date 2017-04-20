@@ -41,10 +41,10 @@ export default {
 
   // Segment
   segmentBackgroundColor: platform === "ios" ? "#F8F8F8" : "#3F51B5",
-  segmentActiveBackgroundColor: platform === "ios" ? "#007aff" : "#fff",
-  segmentTextColor: platform === "ios" ? "#007aff" : "#fff",
+  segmentActiveBackgroundColor: platform === "ios" ? Colors.menuBlue : "#fff",
+  segmentTextColor: platform === "ios" ? Colors.menuBlue : "#fff",
   segmentActiveTextColor: platform === "ios" ? "#fff" : "#3F51B5",
-  segmentBorderColor: platform === "ios" ? "#007aff" : "#fff",
+  segmentBorderColor: platform === "ios" ? Colors.menuBlue : "#fff",
   segmentBorderColorMain: platform === "ios" ? "#a7a6ab" : "#3F51B5",
 
   // New Variable
@@ -108,7 +108,7 @@ export default {
   cardDefaultBg: "#fff",
 
   // Color
-  brandPrimary: Colors.red,
+  brandPrimary: Colors.menuBlue, // this is the color of the chosen on the datepicker
   brandInfo: "#62B1F6",
   brandSuccess: "#5cb85c",
   brandDanger: "#d9534f",
@@ -136,21 +136,21 @@ export default {
   // FooterTab
   tabBarTextColor: "#6b6b6b",
   tabBarTextSize: platform === "ios" ? 14 : 11,
-  activeTab: "#007aff",
-  sTabBarActiveTextColor: "#007aff",
-  tabBarActiveTextColor: "#007aff",
+  activeTab: Colors.menuBlue,
+  sTabBarActiveTextColor: Colors.menuBlue,
+  tabBarActiveTextColor: Colors.menuBlue,
   tabActiveBgColor: "#f1f1f1",
 
   // Tab
   tabDefaultBg: platform === "ios" ? "#F8F8F8" : "#3F51B5",
   topTabBarTextColor: platform === "ios" ? "#6b6b6b" : "#b3c7f9",
-  topTabBarActiveTextColor: platform === "ios" ? "#007aff" : "#fff",
+  topTabBarActiveTextColor: platform === "ios" ? Colors.menuBlue : "#fff",
   topTabActiveBgColor: platform === "ios" ? "#cde1f9" : undefined,
   topTabBarBorderColor: platform === "ios" ? "#a7a6ab" : "#fff",
-  topTabBarActiveBorderColor: platform === "ios" ? "#007aff" : "#fff",
+  topTabBarActiveBorderColor: platform === "ios" ? Colors.menuBlue : "#fff",
 
   // Header
-  toolbarBtnColor: "#007aff",
+  toolbarBtnColor: "black", // light or dark
   toolbarDefaultBg: "#f1f1f1",
   toolbarHeight: platform === "ios" ? 64 : 56,
   toolbarIconSize: platform === "ios" ? 20 : 22,
@@ -160,7 +160,7 @@ export default {
   toolbarInverseBg: "#222",
   toolbarTextColor: platform === "ios" ? "#000" : "#fff",
   toolbarDefaultBorder: "#a7a6ab",
-  iosStatusbar: "light-content",
+  iosStatusbar: "dark-content",
   get statusBarColor() {
     return color(this.toolbarDefaultBg).darken(0.1).hexString();
   },
@@ -173,9 +173,9 @@ export default {
 
   // InputGroup
   inputFontSize: 17,
-  inputBorderColor: "#D9D5DC",
-  inputSuccessBorderColor: "#2b8339",
-  inputErrorBorderColor: "#ed2f2f",
+  inputBorderColor: "transparent",
+  inputSuccessBorderColor: "transparent",
+  inputErrorBorderColor: "transparent",
 
   get inputColor() {
     return this.textColor;

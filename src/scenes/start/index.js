@@ -12,21 +12,25 @@ import { Container, Title, Space, Span, Center, Button } from "./styles";
 export class StartScene extends PureComponent {
   render() {
     const { container, title, button, buttonText } = this.props.settings.theme;
+    const buttons = [
+      { onPress: this.props.game, title: "PLAY" },
+      { onPress: this.props.recent, title: "YOUR RECENT" },
+      { onPress: this.props.highscores, title: "HIGH SCORES" },
+      { onPress: this.props.settingsKey, title: "SETTINGS" }
+    ];
 
     return (
       <Container style={container}>
         <Title style={title}>FLIPPOUR</Title>
         <Space />
         <Center>
-          <Button onPress={this.props.game} style={button}>
-            <Span style={buttonText}>PLAY</Span>
-          </Button>
-          <Button onPress={this.props.recent} style={button}>
-            <Span style={buttonText}>YOUR RECENT</Span>
-          </Button>
-          <Button onPress={this.props.highscores} style={button}>
-            <Span style={buttonText}>HIGH SCORES</Span>
-          </Button>
+          {buttons.map(({ onPress, title }, index) => {
+            return (
+              <Button key={index} onPress={onPress} style={button}>
+                <Span style={buttonText}>{title}</Span>
+              </Button>
+            );
+          })}
         </Center>
       </Container>
     );
