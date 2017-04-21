@@ -1,17 +1,13 @@
-// @flow
-
 import React, { PureComponent } from "react";
 import { Animated } from "react-native";
+import { Sound } from "../../classes/sound";
+import { SettingsDecorator } from "../../decorators/settings";
 import {
   sequence,
   parallel,
   AnimatedView,
   animate
 } from "./animatedSquare.utilities";
-import type {
-  AnimatePropsType,
-  nextPropsType
-} from "./animatedSquare.types.js";
 
 const initial = {
   scale: 0.5,
@@ -19,14 +15,22 @@ const initial = {
   rotate: -0.25
 };
 
+@SettingsDecorator()
 export class AnimatedSquare extends PureComponent {
   animating = false;
 
-  state = {
-    opacity: new Animated.Value(initial.opacity),
-    scale: new Animated.Value(initial.scale),
-    rotate: new Animated.Value(initial.rotate)
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      opacity: new Animated.Value(initial.opacity),
+      scale: new Animated.Value(initial.scale),
+      rotate: new Animated.Value(initial.rotate)
+    };
+    this.sounds = {
+      correct: new Sound("square_correct", props.settings.soundsEnabled),
+      incorrect: new Sound("square_incorrect", props.settings.soundsEnabled)
+    };
+  }
 
   /**
    * Animations
@@ -95,7 +99,7 @@ export class AnimatedSquare extends PureComponent {
     this.levelBegin().start();
   };
 
-  shouldComponentUpdate = (nextProps: nextPropsType) => {
+  shouldComponentUpdate = nextProps => {
     const { clicked, complete, fail, color } = nextProps;
     return (
       fail ||
@@ -105,7 +109,7 @@ export class AnimatedSquare extends PureComponent {
     );
   };
 
-  componentWillReceiveProps = (nextProps: nextPropsType) => {
+  componentWillReceiveProps = nextProps => {
     const { clicked, status, complete, fail, color } = nextProps;
 
     if (
@@ -118,6 +122,7 @@ export class AnimatedSquare extends PureComponent {
     } else if (fail && !this.props.clicked && clicked) {
       // fail & last square chosen
       this.animating = true;
+      this.sounds.incorrect.play();
       this.incorrect().start();
       // why are we doing this?
       // to ensure we auto back on game over
@@ -129,6 +134,7 @@ export class AnimatedSquare extends PureComponent {
     } else if (complete && !this.props.clicked && clicked) {
       // complete & last square chosen
       this.animating = true;
+      this.sounds.correct.play();
       this.correct().start();
     } else if (complete && !this.animating) {
       // complete
@@ -137,10 +143,12 @@ export class AnimatedSquare extends PureComponent {
     } else if (clicked && status && !this.animating) {
       // correct
       this.animating = true;
+      this.sounds.correct.play();
       this.correct().start();
     } else if (clicked && !status && !this.animating) {
       // incorrect
       this.animating = true;
+      this.sounds.incorrect.play();
       this.incorrect().start();
     }
   };
@@ -162,6 +170,10 @@ export class AnimatedSquare extends PureComponent {
           flex: 1,
           margin: 4,
           borderRadius: 10,
+          borderWidth: 2,
+          borderBottomWidth: 0,
+          borderRightWidth: 0,
+          borderColor: "rgba(255, 255, 255, 0.15)",
           opacity: opacityValue,
           backgroundColor: this.props.color,
           transform: [

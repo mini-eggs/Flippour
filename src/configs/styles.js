@@ -21,8 +21,8 @@ function getUserTheme(vars, theme) {
       break;
     }
     case "Dark": {
-      highlight = "#1da1f2";
-      background = "#243447";
+      highlight = "#63a098";
+      background = "#1f1f1f";
       iosStatusbar = "light-content";
       titleFontColor = "#ffffff";
       break;

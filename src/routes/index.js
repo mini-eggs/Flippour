@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 import { Scene, Router, Actions, ActionConst } from "react-native-router-flux";
+import { SettingsDecorator } from "../decorators/settings";
 import { StartScene as Start } from "../scenes/start";
 import { GameContainer as Game } from "../containers/game";
 import { RecentContainer as Recent } from "../containers/recent";
@@ -18,17 +19,26 @@ import { SettingsScene as Settings } from "../scenes/settings";
 
 Actions.pop = () => Actions.start({ type: ActionConst.RESET });
 
-export function RoutingLayer() {
-  return (
-    <Router>
-      <Scene key="root">
-        <Scene hideNavBar key="start" component={Start} />
-        <Scene hideNavBar key="game" component={Game} panHandlers={null} />
-        <Scene hideNavBar key="recent" component={Recent} />
-        <Scene hideNavBar key="highscores" component={HighScores} />
-        {/*note: settings key conflicts with a decorator props*/}
-        <Scene hideNavBar key="settingsKey" component={Settings} />
-      </Scene>
-    </Router>
-  );
+@SettingsDecorator()
+export class RoutingLayer extends Component {
+  render() {
+    return (
+      <Router
+        getSceneStyle={() => {
+          return {
+            backgroundColor: this.props.settings.theme.container.backgroundColor
+          };
+        }}
+      >
+        <Scene key="root">
+          <Scene hideNavBar key="start" component={Start} />
+          <Scene hideNavBar key="game" component={Game} panHandlers={null} />
+          <Scene hideNavBar key="recent" component={Recent} />
+          <Scene hideNavBar key="highscores" component={HighScores} />
+          {/*note: settings key conflicts with a decorator props*/}
+          <Scene hideNavBar key="settingsKey" component={Settings} />
+        </Scene>
+      </Router>
+    );
+  }
 }

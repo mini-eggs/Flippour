@@ -43,12 +43,13 @@ export function SettingsDecorator() {
           break;
         }
         case "Dark": {
-          theme.container.backgroundColor = "#243447";
-          theme.title.color = "#5fb3a7";
-          theme.button.backgroundColor = "#1da1f2";
-          theme.buttonText.color = "#ffffff";
-          theme.text.color = "#5fb3a7";
-          theme.modal.backgroundColor = "#1da1f2";
+          theme.container.backgroundColor = "#1f1f1f";
+          theme.title.color = "#696969";
+          theme.button.backgroundColor = "#63a098";
+          theme.buttonText.color = "rgba(0,0,0,0.35)";
+          theme.buttonText.fontWeight = "500";
+          theme.text.color = "#696969";
+          theme.modal.backgroundColor = "#1b1b1b";
           theme.modalText.color = "#ffffff";
           break;
         }

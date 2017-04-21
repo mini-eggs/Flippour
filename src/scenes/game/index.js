@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react";
 import { Dimensions } from "react-native";
+import { Sound } from "../../classes/sound";
 import { FluxDecorator } from "../../decorators/flux";
 import { GameDecorator } from "../../decorators/game";
 import { ModalDecorator } from "../../decorators/modal";
@@ -17,8 +18,27 @@ import { Container, Top, Title, Center, Bottom, Row } from "./styles";
 export class GameScene extends PureComponent {
   mounted = false;
 
+  constructor(props) {
+    super(props);
+  }
+
   componentWillMount = () => {
+    const soundsEnabled = this.props.settings.soundsEnabled;
+    this.sounds = {
+      background: new Sound(
+        "background_music",
+        soundsEnabled,
+        this.startBackgroundMusic
+      ),
+      complete: new Sound("notification_in", soundsEnabled),
+      fail: new Sound("notification_out", soundsEnabled)
+    };
     this.props.begin();
+  };
+
+  startBackgroundMusic = () => {
+    this.sounds.background.loop();
+    this.sounds.background.play();
   };
 
   componentDidMount = () => {
@@ -31,8 +51,11 @@ export class GameScene extends PureComponent {
 
   componentWillReceiveProps = ({ fail, complete, pop, nextLevel }) => {
     if (fail) {
+      this.sounds.background.stop();
+      this.sounds.fail.play();
       this.onGameStateChange("game over", pop);
     } else if (complete) {
+      this.sounds.complete.play();
       this.onGameStateChange("complete", nextLevel);
     }
   };

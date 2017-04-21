@@ -42,20 +42,30 @@ class ModalComponent extends Component {
     // this.props.sounds.notification_in.setCurrentTime(0.09);
     // this.props.sounds.notification_in.play();
     Animated.parallel([
-      Animated.timing(this.animation.fadeAnim, { toValue: 1, duration: 50 }),
+      Animated.timing(this.animation.fadeAnim, {
+        toValue: 1,
+        duration: 150,
+        useNativeDrier: true
+      }),
       Animated.timing(this.animation.positionAnim, {
         toValue: 0,
-        duration: 150
+        duration: 150,
+        useNativeDrier: true
       })
     ]).start();
   };
 
   remove = () => {
     Animated.parallel([
-      Animated.timing(this.animation.fadeAnim, { toValue: 0, duration: 300 }),
+      Animated.timing(this.animation.fadeAnim, {
+        toValue: 0,
+        duration: 150,
+        useNativeDrier: true
+      }),
       Animated.timing(this.animation.positionAnim, {
         toValue: -50,
-        duration: 150
+        duration: 150,
+        useNativeDrier: true
       })
     ]).start();
   };
@@ -73,16 +83,13 @@ class ModalComponent extends Component {
         },
         () => {
           this.start();
-          setTimeout(
-            () => {
-              this.remove();
-              this.props.removeMessage();
-              this.setState(() => {
-                return { midTransition: false };
-              });
-            },
-            message.time + 600
-          );
+          setTimeout(() => {
+            this.remove();
+            this.props.removeMessage();
+            this.setState(() => {
+              return { midTransition: false };
+            });
+          }, message.time + 600);
         }
       );
     }
