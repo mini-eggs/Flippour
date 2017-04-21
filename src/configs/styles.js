@@ -45,6 +45,10 @@ function getUserTheme(vars, theme) {
 
 @SettingsDecorator()
 export class StylesLayer extends PureComponent {
+  componentDidMount = () => {
+    this.props.loadSettings();
+  };
+
   render = () => {
     return (
       <StyleProvider

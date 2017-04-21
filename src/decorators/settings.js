@@ -11,7 +11,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    saveSettings: settings => dispatch(SettingsActions.saveSettings(settings))
+    saveSettings: settings => dispatch(SettingsActions.saveSettings(settings)),
+    loadSettings: () => dispatch(SettingsActions.loadSettings())
   };
 }
 
