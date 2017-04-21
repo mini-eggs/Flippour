@@ -16,19 +16,23 @@ function getUserTheme(vars, theme) {
       background = "#f1f1f1";
       break;
     }
-    case "Oceanic":
-    case "Solarized":
     case "Dark": {
-      highlight = "#c3524c";
-      background = "#2b1c19";
+      highlight = "#1da1f2";
+      background = "#243447";
+      break;
+    }
+    case "Oceanic": {
+      highlight = "#9f80c5";
+      background = "#1b2b34";
+      break;
+    }
+    case "Solarized": {
+      highlight = "#70bbc2";
+      background = "#33343d";
       break;
     }
   }
 
-  // background
-  vars.checkboxTickColor = background;
-
-  // highlight
   vars.checkboxBgColor = highlight;
   vars.segmentActiveBackgroundColor = highlight;
   vars.segmentTextColor = highlight;

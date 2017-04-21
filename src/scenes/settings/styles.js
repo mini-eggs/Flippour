@@ -13,6 +13,12 @@ export const Button = Styled.TouchableOpacity`
   margin-bottom: 15;
 `;
 
+export const Title = Styled.Text` 
+  font-size: 24;
+  color: white;
+  text-align: center;
+`;
+
 export const Span = Styled.Text` 
   font-size: 20;
   color: white;

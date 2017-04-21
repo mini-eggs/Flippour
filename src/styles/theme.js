@@ -37,7 +37,7 @@ export default {
   DefaultFontSize: 17,
   checkboxBgColor: Colors.menuBlue,
   checkboxSize: 20,
-  checkboxTickColor: Colors.background,
+  checkboxTickColor: "transparent",
 
   // Segment
   segmentBackgroundColor: platform === "ios" ? "#F8F8F8" : "#3F51B5",

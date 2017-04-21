@@ -3,18 +3,26 @@ import React, { PureComponent } from "react";
 import {
   Content,
   Text,
-  Picker,
   Form,
   Item,
   Input,
   ListItem,
+  Picker,
   CheckBox
 } from "native-base";
+import { Modal } from "react-native";
 import { AndroidBackDecorator } from "../../decorators/androidBack";
 import { InfoDecorator } from "../../decorators/info";
 import { FluxDecorator } from "../../decorators/flux";
 import { SettingsDecorator } from "../../decorators/settings";
-import { SettingsContainer, Button, Span, Center, Space } from "./styles";
+import {
+  SettingsContainer,
+  Button,
+  Span,
+  Center,
+  Space,
+  Title
+} from "./styles";
 
 type SettingsType = {
   username: string,
@@ -74,16 +82,23 @@ export class SettingsScene extends PureComponent {
   };
 
   render() {
-    const { container, button, buttonText, text } = this.props.settings.theme;
+    const {
+      container,
+      button,
+      buttonText,
+      text,
+      modal
+    } = this.props.settings.theme;
 
     return (
       <Content style={container}>
         <SettingsContainer>
 
-          <Span style={[text, { textAlign: "left" }]}>
+          <Title style={[text, { textAlign: "left" }]}>
             Theme
-          </Span>
+          </Title>
           <Picker
+            containerStyle={{ backgroundColor: "purple" }}
             textStyle={Object.assign({}, text, { fontSize: 20 })}
             iosHeader="Select one"
             mode="dropdown"
@@ -97,9 +112,9 @@ export class SettingsScene extends PureComponent {
 
           <Space />
 
-          <Span style={[text, { textAlign: "left" }]}>
+          <Title style={[text, { textAlign: "left" }]}>
             Username
-          </Span>
+          </Title>
           <Form>
             <Item>
               <Input
@@ -115,9 +130,9 @@ export class SettingsScene extends PureComponent {
 
           <Space />
 
-          <Span style={[text, { textAlign: "left" }]}>
+          <Title style={[text, { textAlign: "left" }]}>
             Sounds
-          </Span>
+          </Title>
           <ListItem style={{ borderColor: "transparent" }}>
             <CheckBox
               onPress={this.onCheckboxChange}
@@ -129,7 +144,6 @@ export class SettingsScene extends PureComponent {
           </ListItem>
 
           <Space />
-          <Space />
 
           <Center>
             <Button onPress={this.saveSettings} style={button}>
@@ -138,6 +152,9 @@ export class SettingsScene extends PureComponent {
               </Span>
             </Button>
           </Center>
+
+          <Space />
+          <Space />
 
         </SettingsContainer>
       </Content>
