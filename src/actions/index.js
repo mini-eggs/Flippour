@@ -9,3 +9,6 @@ export { GameActions };
 
 import * as FirebaseActions from "./firebase/";
 export { FirebaseActions };
+
+import * as SettingsActions from "./settings";
+export { SettingsActions };

@@ -12,21 +12,48 @@ import {
 } from "native-base";
 import { AndroidBackDecorator } from "../../decorators/androidBack";
 import { InfoDecorator } from "../../decorators/info";
+import { FluxDecorator } from "../../decorators/flux";
 import { SettingsDecorator } from "../../decorators/settings";
 import { SettingsContainer, Button, Span, Center, Space } from "./styles";
 
-type InitialProps = {
-  sounds: Object
+type SettingsType = {
+  username: string,
+  soundsEnabled: boolean,
+  themeName: string,
+  themeOptions: Array<string>,
+  saveSettings: Function
+};
+
+type PropsType = {
+  settings: SettingsType
+};
+
+type StateType = {
+  username: string,
+  soundsEnabled: boolean,
+  themeName: string
 };
 
 @SettingsDecorator()
 @AndroidBackDecorator()
+@FluxDecorator()
 @InfoDecorator()
-export class SettingsScene extends PureComponent<InitialProps, any, any> {
-  state = { username: "" };
+export class SettingsScene extends PureComponent {
+  state: StateType;
+
+  constructor(props: PropsType) {
+    super(props);
+    this.state = {
+      username: props.settings.username,
+      soundsEnabled: props.settings.soundsEnabled,
+      themeName: props.settings.themeName
+    };
+  }
 
   onValueChange = (selected: string) => {
-    // change theme value in store
+    this.setState(() => {
+      return { themeName: selected };
+    });
   };
 
   onUsernameChange = (text: string) => {
@@ -36,14 +63,18 @@ export class SettingsScene extends PureComponent<InitialProps, any, any> {
   };
 
   onCheckboxChange = () => {
-    alert("clicked");
+    this.setState(({ soundsEnabled }) => {
+      return { soundsEnabled: !soundsEnabled };
+    });
+  };
+
+  saveSettings = () => {
+    this.props.saveSettings(this.state);
+    this.props.pop();
   };
 
   render() {
     const { container, button, buttonText, text } = this.props.settings.theme;
-    // test data
-    const options = ["Dark", "Light", "Oceanic", "Solarized"];
-    const soundsEnabled = true;
 
     return (
       <Content style={container}>
@@ -56,10 +87,10 @@ export class SettingsScene extends PureComponent<InitialProps, any, any> {
             textStyle={Object.assign({}, text, { fontSize: 20 })}
             iosHeader="Select one"
             mode="dropdown"
-            selectedValue={options[1]}
+            selectedValue={this.state.themeName}
             onValueChange={this.onValueChange}
           >
-            {options.map((option, index) => {
+            {this.props.themeOptions.map((option, index) => {
               return <Picker.Item key={index} label={option} value={option} />;
             })}
           </Picker>
@@ -72,8 +103,9 @@ export class SettingsScene extends PureComponent<InitialProps, any, any> {
           <Form>
             <Item>
               <Input
+                style={text}
                 multiline={false}
-                placeholder={this.state.username || "EVN"}
+                placeholder={this.state.username || "Three letter username"}
                 value={this.state.username}
                 onChangeText={this.onUsernameChange}
                 maxLength={3}
@@ -87,9 +119,12 @@ export class SettingsScene extends PureComponent<InitialProps, any, any> {
             Sounds
           </Span>
           <ListItem style={{ borderColor: "transparent" }}>
-            <CheckBox onPress={this.onCheckboxChange} checked={soundsEnabled} />
+            <CheckBox
+              onPress={this.onCheckboxChange}
+              checked={this.state.soundsEnabled}
+            />
             <Span style={[text, { textAlign: "left", marginLeft: 15 }]}>
-              {soundsEnabled ? "Enabled" : "Disabled"}
+              {this.state.soundsEnabled ? "Enabled" : "Disabled"}
             </Span>
           </ListItem>
 
@@ -97,7 +132,7 @@ export class SettingsScene extends PureComponent<InitialProps, any, any> {
           <Space />
 
           <Center>
-            <Button style={button}>
+            <Button onPress={this.saveSettings} style={button}>
               <Span style={buttonText}>
                 SAVE
               </Span>

@@ -1,25 +1,27 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { menuBlue } from "../styles/variables";
+import { SettingsActions } from "../actions/";
 
 function mapStateToProps(state) {
   return {
-    theme: state.SettingsReducer.theme
+    ...state.SettingsReducer
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    changeTheme: theme => alert(theme)
+    saveSettings: settings => dispatch(SettingsActions.saveSettings(settings))
   };
 }
 
 export function SettingsDecorator() {
   return DecoratedComponent => {
     return connect(mapStateToProps, mapDispatchToProps)(function(props) {
-      const LIGHT = props.theme === "LIGHT";
+      const LIGHT = props.theme === "Light";
 
       const settings = {
+        ...props,
         themeName: props.theme,
         theme: {
           container: {
