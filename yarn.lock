@@ -2912,9 +2912,9 @@ native-base-shoutem-theme@0.1.0:
     hoist-non-react-statics "^1.0.5"
     lodash "^4.10.1"
 
-native-base@^2.1.2:
+"native-base@git://github.com/mini-eggs/NativeBase.git#ff7bef47de2d5645bc9a3afab21a07de4ed70549":
   version "2.1.2"
-  resolved "https://registry.yarnpkg.com/native-base/-/native-base-2.1.2.tgz#5bb5a516b86b422ffa413953ffd00b7ebe204e71"
+  resolved "git://github.com/mini-eggs/NativeBase.git#ff7bef47de2d5645bc9a3afab21a07de4ed70549"
   dependencies:
     "@shoutem/animation" "^0.8.9"
     blueimp-md5 "^2.5.0"

@@ -9,30 +9,42 @@ import { SettingsDecorator } from "../decorators/settings";
 function getUserTheme(vars, theme) {
   let highlight;
   let background;
+  let iosStatusbar;
+  let titleFontColor;
 
   switch (theme) {
     case "Light": {
       highlight = "#0a3869";
       background = "#f1f1f1";
+      iosStatusbar = "dark-content";
+      titleFontColor = "#000000";
       break;
     }
     case "Dark": {
       highlight = "#1da1f2";
       background = "#243447";
+      iosStatusbar = "light-content";
+      titleFontColor = "#ffffff";
       break;
     }
     case "Oceanic": {
       highlight = "#9f80c5";
       background = "#1b2b34";
+      iosStatusbar = "light-content";
+      titleFontColor = "#ffffff";
       break;
     }
     case "Solarized": {
       highlight = "#70bbc2";
       background = "#33343d";
+      iosStatusbar = "light-content";
+      titleFontColor = "#ffffff";
       break;
     }
   }
 
+  vars.titleFontColor = titleFontColor;
+  vars.iosStatusbar = iosStatusbar;
   vars.checkboxBgColor = highlight;
   vars.segmentActiveBackgroundColor = highlight;
   vars.segmentTextColor = highlight;

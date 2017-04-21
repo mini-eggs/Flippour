@@ -38,7 +38,7 @@ export function SettingsDecorator() {
           theme.button.backgroundColor = "#0a3869";
           theme.buttonText.color = "#ffffff";
           theme.text.color = "#000000";
-          theme.modal.backgroundColor = "#0a3869";
+          theme.modal.backgroundColor = "#e3e3e3";
           theme.modalText.color = "#000000";
           break;
         }

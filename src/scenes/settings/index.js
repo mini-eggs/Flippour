@@ -87,8 +87,10 @@ export class SettingsScene extends PureComponent {
       button,
       buttonText,
       text,
-      modal
+      modal,
+      modalText
     } = this.props.settings.theme;
+    const themeName = this.props.settings.themeName;
 
     return (
       <Content style={container}>
@@ -98,9 +100,12 @@ export class SettingsScene extends PureComponent {
             Theme
           </Title>
           <Picker
-            containerStyle={{ backgroundColor: "purple" }}
+            headerStyle={modal}
+            containerStyle={container}
+            headerTextStyle={{ color: modalText.color }}
             textStyle={Object.assign({}, text, { fontSize: 20 })}
-            iosHeader="Select one"
+            iosHeader="Themes"
+            itemTextStyle={{ color: button.backgroundColor }}
             mode="dropdown"
             selectedValue={this.state.themeName}
             onValueChange={this.onValueChange}
