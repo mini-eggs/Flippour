@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react";
 import { Dimensions } from "react-native";
+import { GameOver } from "../../components/";
 import { Sound } from "../../classes/sound";
 import { FluxDecorator } from "../../decorators/flux";
 import { GameDecorator } from "../../decorators/game";
@@ -20,6 +21,9 @@ export class GameScene extends PureComponent {
 
   constructor(props) {
     super(props);
+    this.state = {
+      showModal: false
+    };
   }
 
   componentWillMount = () => {
@@ -49,14 +53,24 @@ export class GameScene extends PureComponent {
     this.mounted = false;
   };
 
-  componentWillReceiveProps = ({ fail, complete, pop, nextLevel }) => {
+  componentWillReceiveProps = ({ fail, complete, nextLevel }) => {
     if (fail) {
       this.sounds.background.stop();
       this.sounds.fail.play();
-      this.onGameStateChange("game over", pop);
+      setTimeout(this.backOrShowModal, 1500);
     } else if (complete) {
       this.sounds.complete.play();
-      this.onGameStateChange("complete", nextLevel);
+      setTimeout(nextLevel, 1250);
+    }
+  };
+
+  backOrShowModal = () => {
+    if (this.props.settings.username) {
+      this.props.pop();
+    } else {
+      this.setState(() => {
+        return { showModal: true };
+      });
     }
   };
 
@@ -64,17 +78,10 @@ export class GameScene extends PureComponent {
     this.props.forceGameOver();
   };
 
-  onGameStateChange = (msg, fn) => {
-    this.props.setMessage({ text: msg, time: 1000 });
-    setTimeout(() => {
-      if (this.mounted) fn();
-    }, 2000);
-  };
-
   render = () => {
     const x = new Array(this.props.squares.length).fill(0);
     const y = new Array(this.props.squares[0].length).fill(0);
-    const { container, title } = this.props.settings.theme;
+    const { container, title, modal, modalText } = this.props.settings.theme;
 
     return (
       <Container style={container}>
@@ -101,6 +108,13 @@ export class GameScene extends PureComponent {
         <Bottom>
           <ScoreBoard />
         </Bottom>
+        <GameOver
+          headerStyle={modal}
+          containerStyle={container}
+          headerTextStyle={{ color: modalText.color }}
+          show={this.state.showModal}
+          complete={this.props.pop}
+        />
       </Container>
     );
   };
