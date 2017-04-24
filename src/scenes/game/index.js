@@ -93,6 +93,11 @@ export class GameScene extends PureComponent {
             <Row key={xindex}>
               {y.map((single, yindex) => (
                 <SingleSquare
+                  gameColors={
+                    this.props.settings.gameColors[
+                      this.props.settings.themeName
+                    ]
+                  }
                   square={this.props.squares[xindex][yindex]}
                   onSquareClick={this.props.onSquareClick}
                   key={yindex}

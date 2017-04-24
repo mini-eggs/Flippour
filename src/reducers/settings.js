@@ -1,6 +1,32 @@
 const initialState = {
   theme: "Light",
   themeOptions: ["Dark", "Light", "Oceanic", "Solarized"],
+  gameColors: {
+    Dark: {
+      red: "red",
+      blue: "blue",
+      orange: "orange",
+      green: "green"
+    },
+    Light: {
+      red: "red",
+      blue: "blue",
+      orange: "orange",
+      green: "green"
+    },
+    Oceanic: {
+      red: "red",
+      blue: "blue",
+      orange: "orange",
+      green: "green"
+    },
+    Solarized: {
+      red: "red",
+      blue: "blue",
+      orange: "orange",
+      green: "green"
+    }
+  },
   username: "",
   soundsEnabled: true
 };

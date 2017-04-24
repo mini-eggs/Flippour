@@ -2,23 +2,6 @@ import React, { PureComponent } from "react";
 import { AnimatedSquare as Square } from "./animatedSquare";
 import { SquareButton as Button, SquareContainer as Container } from "./styles";
 
-function changeColor(color) {
-  switch (color) {
-    case "red": {
-      return "#771F1F";
-    }
-    case "blue": {
-      return "#0a3869";
-    }
-    case "orange": {
-      return "#F36900";
-    }
-    case "green": {
-      return "#006400";
-    }
-  }
-}
-
 export class SingleSquare extends PureComponent {
   fail = false;
   complete = false;
@@ -73,7 +56,7 @@ export class SingleSquare extends PureComponent {
             complete={this.complete}
             status={this.status}
             clicked={this.clicked}
-            color={changeColor(this.color)}
+            color={this.props.gameColors[this.color]}
             x={this.props.x}
             y={this.props.y}
           />
