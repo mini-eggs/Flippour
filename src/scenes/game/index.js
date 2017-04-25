@@ -113,13 +113,7 @@ export class GameScene extends PureComponent {
         <Bottom>
           <ScoreBoard />
         </Bottom>
-        <GameOver
-          headerStyle={modal}
-          containerStyle={container}
-          headerTextStyle={{ color: modalText.color }}
-          show={this.state.showModal}
-          complete={this.props.pop}
-        />
+        <GameOver show={this.state.showModal} complete={this.props.pop} />
       </Container>
     );
   };
