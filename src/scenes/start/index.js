@@ -10,6 +10,10 @@ import { Container, Title, Space, Span, Center, Button } from "./styles";
 @FirebaseDecorator()
 @FluxDecorator()
 export class StartScene extends PureComponent {
+  componentWillReceiveProps() {
+    this.props.preload();
+  }
+
   render() {
     const { container, title, button, buttonText } = this.props.settings.theme;
     const buttons = [

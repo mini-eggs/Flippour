@@ -1,6 +1,7 @@
 // @flow
 
 import { AsyncStorage } from "react-native";
+import { updateScoresWithUsername } from "./firebase/";
 
 const USER_SETTINGS = "userSettings";
 
@@ -8,7 +9,7 @@ function saveSettingsToStorage(props: SaveType) {
   AsyncStorage.setItem(USER_SETTINGS, JSON.stringify(props));
 }
 
-function getUserSettingsFromStorage() {
+export function getUserSettingsFromStorage() {
   return new Promise(async (resolve, reject) => {
     try {
       resolve(JSON.parse(await AsyncStorage.getItem(USER_SETTINGS)));
@@ -25,8 +26,10 @@ type SaveType = {
 };
 
 export function saveSettings(props: SaveType) {
-  saveSettingsToStorage(props);
   const { username, soundsEnabled } = props;
+  saveSettingsToStorage(props);
+  updateScoresWithUsername(username);
+
   return {
     type: "SAVE_SETTINGS",
     payload: {

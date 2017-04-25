@@ -47,6 +47,12 @@ export const Number = Styled.Text`
   font-size: 18;
   color: white;
 `;
+export const Usernname = Styled.Text`
+  flex: 1;
+  font-size: 18;
+  text-align: left;
+  color: white;
+`;
 export const Score = Styled.Text`
   flex: 1;
   font-size: 18;

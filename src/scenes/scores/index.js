@@ -15,8 +15,20 @@ import {
   Number,
   Score,
   Level,
-  Spacer
+  Spacer,
+  Usernname
 } from "./styles";
+
+function getUsername(username) {
+  const standard = "N/A";
+  if (typeof username === "undefined") {
+    return standard;
+  } else if (username.length === 0) {
+    return standard;
+  } else {
+    return username;
+  }
+}
 
 @SettingsDecorator()
 @AndroidBackDecorator()
@@ -49,13 +61,16 @@ export class ScoresScene extends Component {
           </Featured>
         </FeaturedContainer>
         <SubTitle style={text}>{subtitle}</SubTitle>
-        {scores.map(({ score, level }, index) => {
+        {scores.map(({ score, level, username }, index) => {
           if (index === 0) return null;
           return (
             <Ranking key={index - 1}>
               <Number style={text}>
                 #{(index + 1).toString()}
               </Number>
+              <Usernname style={text}>
+                {getUsername(username)}
+              </Usernname>
               <Score style={text}>
                 {score.toString()} pts
               </Score>

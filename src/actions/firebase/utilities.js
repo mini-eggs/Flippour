@@ -58,3 +58,31 @@ export function getData(location, count, sortOptions) {
     });
   });
 }
+
+export function updateScoresWithUsername(username) {
+  const updates = {};
+
+  const games = Firebase.database()
+    .ref("games")
+    .orderByChild("user")
+    .equalTo(User)
+    .once("value");
+
+  return new Promise((resolve, reject) => {
+    games.then(snap => {
+      const data = snap.val();
+      if (!data) {
+        reject();
+        return;
+      }
+
+      Object.keys(data).map(key => {
+        const gameData = data[key];
+        gameData.username = username;
+        updates[`/games/${key}`] = gameData;
+      });
+
+      resolve(Firebase.database().ref().update(updates));
+    });
+  });
+}

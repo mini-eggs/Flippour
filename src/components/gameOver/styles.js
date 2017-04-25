@@ -7,7 +7,7 @@ export const Center = Styled.View`
 `;
 
 export const GameOverTitle = Styled.Text`
-  font-size: 24;
+  font-size: 48;
 `;
 
 export const Spacer = Styled.View`

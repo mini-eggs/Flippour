@@ -12,40 +12,15 @@ import {
 } from "native-base";
 import { AndroidBackDecorator } from "../../decorators/androidBack";
 import { SettingsDecorator } from "../../decorators/settings";
+import { FluxDecorator } from "../../decorators/flux";
 import { Center, GameOverTitle, Spacer, CustomButton, Span } from "./styles";
 
 @AndroidBackDecorator("hide")
 @SettingsDecorator()
+@FluxDecorator()
 export class GameOver extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: props.show,
-      username: props.settings.username
-    };
-  }
-
-  componentWillReceiveProps({ show }) {
-    if (show != this.state.show) {
-      setTimeout(() => {
-        this.setState(() => {
-          return { show: show };
-        });
-      }, 1000);
-    }
-  }
-
-  hide = () => {
-    this.setState(
-      () => {
-        return { show: false };
-      },
-      () => {
-        setTimeout(() => {
-          this.props.complete();
-        }, 1000);
-      }
-    );
+  state = {
+    username: ""
   };
 
   onChange = text => {
@@ -56,8 +31,12 @@ export class GameOver extends PureComponent {
 
   saveUsername = () => {
     if (this.state.username) {
-      this.props.saveSettings({ username: this.state.username });
-      this.props.hide();
+      this.props.saveSettings({
+        username: this.state.username,
+        themeName: this.props.settings.themeName,
+        soundsEnabled: this.props.settings.soundsEnabled
+      });
+      this.props.pop();
     }
   };
 
@@ -74,10 +53,11 @@ export class GameOver extends PureComponent {
     return (
       <Modal
         animationType={"slide"}
-        visible={this.state.show}
-        onRequestClose={this.hide}
+        visible={this.props.show}
+        transparent={true}
       >
         <Container style={container}>
+
           <Header style={modal}>
             <Left />
             <Body>
@@ -91,13 +71,16 @@ export class GameOver extends PureComponent {
           <Center>
 
             <GameOverTitle>
-              Game Over
+              GAME OVER
             </GameOverTitle>
 
             <Spacer />
 
             <Input
-              style={Object.assign({}, text, { flex: 0, textAlign: "center" })}
+              style={Object.assign({}, text, {
+                flex: 0,
+                textAlign: "center"
+              })}
               multiline={false}
               placeholder={"Enter three letter username"}
               value={this.state.username}
@@ -109,7 +92,7 @@ export class GameOver extends PureComponent {
 
             <CustomButton onPress={this.saveUsername} style={button}>
               <Span style={buttonText}>
-                SAVE
+                CONTINUE
               </Span>
             </CustomButton>
 

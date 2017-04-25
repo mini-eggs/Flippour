@@ -1,7 +1,15 @@
-import { insertData, getData } from "./utilities";
+import { insertData, getData, updateScoresWithUsername } from "./utilities";
+export { updateScoresWithUsername };
+import { getUserSettingsFromStorage } from "../settings";
 
-export function saveGame(score, level) {
-  const data = { score: score, level: level };
+export async function saveGame(score, level) {
+  let username = "";
+  try {
+    username = (await getUserSettingsFromStorage()).username;
+  } catch (err) {
+    // no username
+  }
+  const data = { score: score, level: level, username: username };
   const status = insertData("/games/", data);
   return status;
 }
