@@ -1,5 +1,6 @@
-import { Firebase, User } from "./initial";
+import { InteractionManager } from "react-native";
 import { sortBy, take } from "lodash";
+import { Firebase, User } from "./initial";
 
 function getRef() {
   return Firebase.database().ref();
@@ -82,7 +83,11 @@ export function updateScoresWithUsername(username) {
         updates[`/games/${key}`] = gameData;
       });
 
-      resolve(Firebase.database().ref().update(updates));
+      // do not blog the thread
+      // this can get expensive
+      InteractionManager.runAfterInteractions(() => {
+        resolve(Firebase.database().ref().update(updates));
+      });
     });
   });
 }

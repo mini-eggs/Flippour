@@ -47,7 +47,8 @@ export class GameOver extends PureComponent {
       modalText,
       button,
       buttonText,
-      text
+      text,
+      title
     } = this.props.settings.theme;
 
     return (
@@ -70,7 +71,7 @@ export class GameOver extends PureComponent {
 
           <Center>
 
-            <GameOverTitle>
+            <GameOverTitle style={title}>
               GAME OVER
             </GameOverTitle>
 
@@ -95,6 +96,8 @@ export class GameOver extends PureComponent {
                 CONTINUE
               </Span>
             </CustomButton>
+
+            <Spacer />
 
           </Center>
 

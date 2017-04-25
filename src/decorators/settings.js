@@ -49,7 +49,7 @@ export function SettingsDecorator() {
           theme.buttonText.color = "rgba(0,0,0,0.35)";
           theme.buttonText.fontWeight = "500";
           theme.text.color = "#696969";
-          theme.modal.backgroundColor = "#1b1b1b";
+          theme.modal.backgroundColor = "#63a098";
           theme.modalText.color = "#ffffff";
           break;
         }
