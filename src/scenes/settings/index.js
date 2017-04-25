@@ -103,10 +103,14 @@ export class SettingsScene extends PureComponent {
             headerStyle={modal}
             containerStyle={container}
             headerTextStyle={{ color: modalText.color }}
-            textStyle={Object.assign({}, text, { fontSize: 20 })}
+            textStyle={Object.assign({}, text, { fontSize: 20 })} /* ios */
+            style={Object.assign({}, text, {
+              fontSize: 20,
+              backgroundColor: "transparent"
+            })} /* android */
             iosHeader="Themes"
             itemTextStyle={{ color: button.backgroundColor }}
-            mode="dropdown"
+            mode="dialog"
             selectedValue={this.state.themeName}
             onValueChange={this.onValueChange}
           >

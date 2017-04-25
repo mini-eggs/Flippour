@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { Modal } from "react-native";
+import { Modal, StatusBar } from "react-native";
 import {
   Container,
   Header,
@@ -16,9 +16,9 @@ import { SettingsDecorator } from "../../decorators/settings";
 import { FluxDecorator } from "../../decorators/flux";
 import { Center, GameOverTitle, Spacer, CustomButton, Span } from "./styles";
 
-@AndroidBackDecorator("hide")
 @SettingsDecorator()
 @FluxDecorator()
+@AndroidBackDecorator()
 export class GameOver extends PureComponent {
   state = {
     username: ""
@@ -28,6 +28,10 @@ export class GameOver extends PureComponent {
     this.setState(() => {
       return { username: text.replace(" ", "").toUpperCase() };
     });
+  };
+
+  exit = () => {
+    this.props.pop();
   };
 
   saveUsername = () => {
@@ -56,7 +60,7 @@ export class GameOver extends PureComponent {
       <Modal
         animationType={"slide"}
         visible={this.props.show}
-        transparent={true}
+        transparent={false}
       >
         <Container style={container}>
           <Header style={modal}>
@@ -79,7 +83,8 @@ export class GameOver extends PureComponent {
               <Input
                 style={Object.assign({}, text, {
                   flex: 0,
-                  textAlign: "center"
+                  textAlign: "center",
+                  minWidth: 250
                 })}
                 multiline={false}
                 placeholder={"Enter three letter username"}
