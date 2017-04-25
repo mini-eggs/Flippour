@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { Modal, StatusBar } from "react-native";
+import { Modal } from "react-native";
 import {
   Container,
   Header,
@@ -91,6 +91,8 @@ export class GameOver extends PureComponent {
                 value={this.state.username}
                 onChangeText={this.onChange}
                 maxLength={3}
+                returnKeyType="go"
+                onBlur={this.saveUsername}
               />
               <Spacer />
               <CustomButton onPress={this.saveUsername} style={button}>

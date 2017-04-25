@@ -133,6 +133,7 @@ export class SettingsScene extends PureComponent {
                 value={this.state.username}
                 onChangeText={this.onUsernameChange}
                 maxLength={3}
+                returnKeyType="done"
               />
             </Item>
           </Form>
