@@ -18,67 +18,11 @@ function mapDispatchToProps(dispatch) {
 
 export function SettingsDecorator() {
   return DecoratedComponent => {
-    return connect(mapStateToProps, mapDispatchToProps)(function(props) {
-      const LIGHT = props.theme === "Light";
-
-      const theme = {
-        container: {},
-        title: {},
-        button: {},
-        buttonText: {},
-        text: {},
-        modal: {},
-        modalText: {}
-      };
-
-      switch (props.theme) {
-        case "Light": {
-          theme.container.backgroundColor = "#f1f1f1";
-          theme.title.color = "#000000";
-          theme.button.backgroundColor = "#0a3869";
-          theme.buttonText.color = "#ffffff";
-          theme.text.color = "#000000";
-          theme.modal.backgroundColor = "#e3e3e3";
-          theme.modalText.color = "#000000";
-          break;
-        }
-        case "Dark": {
-          theme.container.backgroundColor = "#1f1f1f";
-          theme.title.color = "#696969";
-          theme.button.backgroundColor = "#63a098";
-          theme.buttonText.color = "rgba(0,0,0,0.35)";
-          theme.buttonText.fontWeight = "500";
-          theme.text.color = "#696969";
-          theme.modal.backgroundColor = "#63a098";
-          theme.modalText.color = "#ffffff";
-          break;
-        }
-        case "Oceanic": {
-          theme.container.backgroundColor = "#1b2b34";
-          theme.title.color = "#4ab3b3";
-          theme.button.backgroundColor = "#9f80c5";
-          theme.buttonText.color = "#ffffff";
-          theme.text.color = "#4ab3b3";
-          theme.modal.backgroundColor = "#9f90c5";
-          theme.modalText.color = "#ffffff";
-          break;
-        }
-        case "Solarized": {
-          theme.container.backgroundColor = "#33343d";
-          theme.title.color = "#e1946b";
-          theme.button.backgroundColor = "#70bbc2";
-          theme.buttonText.color = "#ffffff";
-          theme.text.color = "#e1946b";
-          theme.modal.backgroundColor = "#70bbc2";
-          theme.modalText.color = "#ffffff";
-          break;
-        }
-      }
-
+    return connect(mapStateToProps, mapDispatchToProps)(props => {
       const settings = {
         ...props,
         themeName: props.theme,
-        theme: theme
+        theme: props.componentStyles[props.theme]
       };
 
       return <DecoratedComponent settings={settings} {...props} />;

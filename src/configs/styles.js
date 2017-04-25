@@ -6,57 +6,21 @@ import variables from "../styles/theme";
 import * as Colors from "../styles/variables";
 import { SettingsDecorator } from "../decorators/settings";
 
-function getUserTheme(vars, theme) {
-  let highlight;
-  let background;
-  let iosStatusbar;
-  let titleFontColor;
-
-  switch (theme) {
-    case "Light": {
-      highlight = "#0a3869";
-      background = "#f1f1f1";
-      iosStatusbar = "dark-content";
-      titleFontColor = "#000000";
-      break;
-    }
-    case "Dark": {
-      highlight = "#63a098";
-      background = "#1f1f1f";
-      iosStatusbar = "light-content";
-      titleFontColor = "#ffffff";
-      break;
-    }
-    case "Oceanic": {
-      highlight = "#9f80c5";
-      background = "#1b2b34";
-      iosStatusbar = "light-content";
-      titleFontColor = "#ffffff";
-      break;
-    }
-    case "Solarized": {
-      highlight = "#70bbc2";
-      background = "#33343d";
-      iosStatusbar = "light-content";
-      titleFontColor = "#ffffff";
-      break;
-    }
-  }
-
-  vars.titleFontColor = titleFontColor;
-  vars.iosStatusbar = iosStatusbar;
-  vars.checkboxBgColor = highlight;
-  vars.segmentActiveBackgroundColor = highlight;
-  vars.segmentTextColor = highlight;
-  vars.segmentBorderColor = highlight;
-  vars.brandPrimary = highlight;
-  vars.activeTab = highlight;
-  vars.sTabBarActiveTextColor = highlight;
-  vars.tabBarActiveTextColor = highlight;
-  vars.topTabBarActiveTextColor = highlight;
-  vars.topTabBarActiveBorderColor = highlight;
-
-  return vars;
+function getUserTheme(theme, settings) {
+  const { highlight, background, iosStatusbar, titleFontColor } = settings;
+  theme.titleFontColor = titleFontColor;
+  theme.iosStatusbar = iosStatusbar;
+  theme.checkboxBgColor = highlight;
+  theme.segmentActiveBackgroundColor = highlight;
+  theme.segmentTextColor = highlight;
+  theme.segmentBorderColor = highlight;
+  theme.brandPrimary = highlight;
+  theme.activeTab = highlight;
+  theme.sTabBarActiveTextColor = highlight;
+  theme.tabBarActiveTextColor = highlight;
+  theme.topTabBarActiveTextColor = highlight;
+  theme.topTabBarActiveBorderColor = highlight;
+  return theme;
 }
 
 @SettingsDecorator()
@@ -66,20 +30,18 @@ export class StylesLayer extends PureComponent {
   };
 
   render = () => {
+    const { settings, children } = this.props;
+    const customVariables = settings.componentColors[settings.themeName];
+    const theme = getUserTheme(variables, customVariables);
+
     return (
-      <StyleProvider
-        style={getTheme(getUserTheme(variables, this.props.settings.themeName))}
-      >
-        <Container style={this.props.settings.theme.container}>
+      <StyleProvider style={getTheme(theme)}>
+        <Container style={settings.theme.container}>
           <StatusBar
-            backgroundColor={this.props.settings.theme.modal.backgroundColor}
-            barStyle={
-              this.props.settings.themeName === "Light"
-                ? "dark-content"
-                : "light-content"
-            }
+            backgroundColor={settings.theme.modal.backgroundColor}
+            barStyle={theme.iosStatusbar}
           />
-          {this.props.children}
+          {children}
         </Container>
       </StyleProvider>
     );

@@ -4,7 +4,7 @@ Android and iOS puzzle game. A post-apocalyptic, exciting thriller. Can be found
 
 Flippour starts with ten seconds to complete each level. Each ten levels the timer goes down by one second. Tap the correct colored square for +1. Tap incorrectly and get -10!
 
-#### Roadmap
+#### Roadmap, next app store release details and additions
 
 1. Settings scene
       * User info √
