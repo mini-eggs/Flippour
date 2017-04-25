@@ -8,7 +8,8 @@ import {
   Button,
   Body,
   Title,
-  Input
+  Input,
+  Content
 } from "native-base";
 import { AndroidBackDecorator } from "../../decorators/androidBack";
 import { SettingsDecorator } from "../../decorators/settings";
@@ -58,7 +59,6 @@ export class GameOver extends PureComponent {
         transparent={true}
       >
         <Container style={container}>
-
           <Header style={modal}>
             <Left />
             <Body>
@@ -68,39 +68,34 @@ export class GameOver extends PureComponent {
             </Body>
             <Right />
           </Header>
-
-          <Center>
-
-            <GameOverTitle style={title}>
-              GAME OVER
-            </GameOverTitle>
-
-            <Spacer />
-
-            <Input
-              style={Object.assign({}, text, {
-                flex: 0,
-                textAlign: "center"
-              })}
-              multiline={false}
-              placeholder={"Enter three letter username"}
-              value={this.state.username}
-              onChangeText={this.onChange}
-              maxLength={3}
-            />
-
-            <Spacer />
-
-            <CustomButton onPress={this.saveUsername} style={button}>
-              <Span style={buttonText}>
-                CONTINUE
-              </Span>
-            </CustomButton>
-
-            <Spacer />
-
-          </Center>
-
+          <Content>
+            <Center>
+              <Spacer />
+              <Spacer />
+              <GameOverTitle style={title}>
+                GAME OVER
+              </GameOverTitle>
+              <Spacer />
+              <Input
+                style={Object.assign({}, text, {
+                  flex: 0,
+                  textAlign: "center"
+                })}
+                multiline={false}
+                placeholder={"Enter three letter username"}
+                value={this.state.username}
+                onChangeText={this.onChange}
+                maxLength={3}
+              />
+              <Spacer />
+              <CustomButton onPress={this.saveUsername} style={button}>
+                <Span style={buttonText}>
+                  CONTINUE
+                </Span>
+              </CustomButton>
+              <Spacer />
+            </Center>
+          </Content>
         </Container>
       </Modal>
     );
