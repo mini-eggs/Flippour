@@ -7,15 +7,18 @@ Flippour starts with ten seconds to complete each level. Each ten levels the tim
 #### Roadmap
 
 1. Settings scene
-      * User info
-      * Theme info
-      * Enable/disable sounds
-2. Game over scene
-      * Full page modal
-      * User enter three letter name - also available on settings scene
+      * User info √
+      * Theme info √
+      * Enable/disable sounds √
+      * Consider restyling
+2. Game over scene √
+      * Full page modal √
+      * User enter three letter name - also available on settings scene √
+      * Consider restyling
 3. Sounds
-      * Square click correct/incorrect
-      * Level complete/game over
+      * Square click correct/incorrect √
+      * Level complete/game over √
+      * Final sounds need to be chosen
 4. Incremental difficulty
       * Bonus levels
       * level progression will change
