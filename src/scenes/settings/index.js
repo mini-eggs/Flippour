@@ -43,8 +43,8 @@ type StateType = {
   themeName: string
 };
 
-@SettingsDecorator()
 @AndroidBackDecorator()
+@SettingsDecorator()
 @FluxDecorator()
 @InfoDecorator()
 export class SettingsScene extends PureComponent {
