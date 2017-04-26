@@ -92,7 +92,7 @@ const initialState = {
     }
   },
   username: "",
-  soundsEnabled: true
+  soundsEnabled: false
 };
 
 export const SettingsReducer = (state = initialState, action) => {

@@ -1,4 +1,5 @@
 // @flow
+
 import React, { PureComponent } from "react";
 import {
   Content,
@@ -140,7 +141,7 @@ export class SettingsScene extends PureComponent {
 
           <Space />
 
-          <Title style={[text, { textAlign: "left" }]}>
+          {/*<Title style={[text, { textAlign: "left" }]}>
             Sounds
           </Title>
           <ListItem style={{ borderColor: "transparent" }}>
@@ -153,7 +154,7 @@ export class SettingsScene extends PureComponent {
             </Span>
           </ListItem>
 
-          <Space />
+          <Space />*/}
 
           <Center>
             <Button onPress={this.saveSettings} style={button}>
