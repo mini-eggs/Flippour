@@ -7,18 +7,13 @@ Flippour starts with ten seconds to complete each level. Each ten levels the tim
 #### Roadmap, next app store release details and additions
 
 1. Settings scene
-      * User info √
-      * Theme info √
-      * Enable/disable sounds √
+      * Enable/disable sounds
       * Consider restyling
-2. Game over scene √
-      * Full page modal √
-      * User enter three letter name - also available on settings scene √
+2. Game over scene
       * Consider restyling
 3. Sounds
-      * Square click correct/incorrect √
-      * Level complete/game over √
-      * Final sounds need to be chosen
+      * Square click correct/incorrect
+      * Level complete/game over
 4. Incremental difficulty
       * Bonus levels
       * level progression will change

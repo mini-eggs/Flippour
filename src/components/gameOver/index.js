@@ -73,28 +73,28 @@ export class GameOver extends PureComponent {
             <Right />
           </Header>
           <Content>
+            <Spacer />
+            <Spacer />
+            <GameOverTitle style={title}>
+              GAME OVER
+            </GameOverTitle>
+            <Spacer />
+            <Input
+              style={Object.assign({}, text, {
+                flex: 0,
+                textAlign: "center",
+                minWidth: 250
+              })}
+              multiline={false}
+              placeholder={"Enter three letter username"}
+              value={this.state.username}
+              onChangeText={this.onChange}
+              maxLength={3}
+              returnKeyType="go"
+              onBlur={this.saveUsername}
+            />
+            <Spacer />
             <Center>
-              <Spacer />
-              <Spacer />
-              <GameOverTitle style={title}>
-                GAME OVER
-              </GameOverTitle>
-              <Spacer />
-              <Input
-                style={Object.assign({}, text, {
-                  flex: 0,
-                  textAlign: "center",
-                  minWidth: 250
-                })}
-                multiline={false}
-                placeholder={"Enter three letter username"}
-                value={this.state.username}
-                onChangeText={this.onChange}
-                maxLength={3}
-                returnKeyType="go"
-                onBlur={this.saveUsername}
-              />
-              <Spacer />
               <CustomButton onPress={this.saveUsername} style={button}>
                 <Span style={buttonText}>
                   CONTINUE
