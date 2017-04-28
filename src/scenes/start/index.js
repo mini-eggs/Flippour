@@ -29,7 +29,7 @@ export class StartScene extends PureComponent {
             </SingleSquare>
           </Row>
           <Row>
-            <SingleSquare onPress={this.props.recent} color={colors.orange}>
+            <SingleSquare onPress={this.props.store} color={colors.orange}>
               <Icon style={IconStyle} name="ios-bookmark" />
             </SingleSquare>
             <SingleSquare onPress={this.props.settingsKey} color={colors.green}>

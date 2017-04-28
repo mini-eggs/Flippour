@@ -21,6 +21,7 @@
 		"react": "16.0.0-alpha.6",
 		"react-native": "git://github.com/mini-eggs/react-native.git#fd658a27846c720f7f121fc73572687a22842cbb",
 		"react-native-device-info": "^0.10.1",
+		"react-native-in-app-utils": "^5.2.3",
 		"react-native-router-flux": "^3.38.0",
 		"react-native-sound": "^0.9.1",
 		"react-redux": "^5.0.3",

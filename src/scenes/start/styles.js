@@ -1,12 +1,10 @@
 import Styled from "styled-components/native";
 import { Dimensions } from "react-native";
-import * as Colors from "../../styles/variables";
 
 export const Container = Styled.View`
   flex: 1
   justify-content: center;
   align-items: center;
-  background-color: ${Colors.background};
 `;
 
 const halfWidth = Dimensions.get("window").width / 2;

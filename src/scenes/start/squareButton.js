@@ -15,7 +15,11 @@ export class SingleSquare extends PureComponent {
     rotate: new Animated.Value(initial.rotate)
   };
 
+  animatingStatus = false;
+
   onPress = fn => () => {
+    if (this.animatingStatus) return;
+    this.animatingStatus = true;
     parallel([
       sequence([
         animate(this.state.scale, 0.9, 125),
@@ -29,6 +33,7 @@ export class SingleSquare extends PureComponent {
   };
 
   reset = () => {
+    this.animatingStatus = false;
     parallel([
       animate(this.state.opacity, initial.opacity, 1000),
       animate(this.state.rotate, initial.rotate, 0)

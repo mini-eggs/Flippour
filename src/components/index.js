@@ -6,3 +6,6 @@ export { GameOver };
 
 import { BackButton } from "./backButton/";
 export { BackButton };
+
+import { ProductInfo } from "./productInfo";
+export { ProductInfo };

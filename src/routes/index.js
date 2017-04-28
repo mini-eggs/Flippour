@@ -6,6 +6,7 @@ import { GameContainer as Game } from "../containers/game";
 import { RecentContainer as Recent } from "../containers/recent";
 import { HighScoresContainer as HighScores } from "../containers/highscores";
 import { SettingsScene as Settings } from "../scenes/settings";
+import { StoreScene as Store } from "../scenes/store";
 
 /*
       Okay, listen up.
@@ -37,6 +38,7 @@ export class RoutingLayer extends Component {
           <Scene hideNavBar key="highscores" component={HighScores} />
           {/*note: settings key conflicts with a decorator props*/}
           <Scene hideNavBar key="settingsKey" component={Settings} />
+          <Scene hideNavBar key="store" component={Store} />
         </Scene>
       </Router>
     );
