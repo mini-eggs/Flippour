@@ -3,9 +3,8 @@ package com.flippour;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.idehub.Billing.InAppBillingBridgePackage;
-import com.zmxv.RNSound.RNSoundPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
+import com.zmxv.RNSound.RNSoundPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -26,9 +25,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new InAppBillingBridgePackage(),
-            new RNSoundPackage(),
-            new RNDeviceInfo()
+            new RNDeviceInfo(),
+            new RNSoundPackage()
       );
     }
   };
