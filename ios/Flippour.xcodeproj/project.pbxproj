@@ -65,6 +65,7 @@
 		C873AEDE62DE43BDB541ABB7 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C56F4CBE4C0E4844A80F1B47 /* Rubik-Black.ttf */; };
 		D4EF73AE3AB042E985DBF818 /* Arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23C095B09EFB400AA400CE6E /* Arial.ttf */; };
 		D9ED92BD52A64EFAA85AD30E /* Skia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C10DE55604A04A6A80DB2173 /* Skia.ttf */; };
+		DD21A1D71EB3BFB200005165 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD21A1D61EB3BFB200005165 /* StoreKit.framework */; };
 		DD35AB431E96BE560058F2C1 /* notification_in.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD35AB411E96BE560058F2C1 /* notification_in.mp3 */; };
 		DD35AB441E96BE560058F2C1 /* notification_out.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD35AB421E96BE560058F2C1 /* notification_out.mp3 */; };
 		DD35AB471E96C2810058F2C1 /* square_correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD35AB451E96C2810058F2C1 /* square_correct.mp3 */; };
@@ -359,6 +360,7 @@
 		C7B8B74DD36C4CDE91BDF308 /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
 		C8F4DEF0608745098338C329 /* Microsoft Sans Serif.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Microsoft Sans Serif.ttf"; path = "../node_modules/native-base/Fonts/Microsoft Sans Serif.ttf"; sourceTree = "<group>"; };
 		D7118AB3ABD54F0EBAD22A31 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		DD21A1D61EB3BFB200005165 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DD35AB411E96BE560058F2C1 /* notification_in.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notification_in.mp3; path = ../sounds/notification_in.mp3; sourceTree = "<group>"; };
 		DD35AB421E96BE560058F2C1 /* notification_out.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notification_out.mp3; path = ../sounds/notification_out.mp3; sourceTree = "<group>"; };
 		DD35AB451E96C2810058F2C1 /* square_correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = square_correct.mp3; path = ../sounds/square_correct.mp3; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD21A1D71EB3BFB200005165 /* StoreKit.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -594,6 +597,7 @@
 				00E356EF1AD99517003FC87E /* FlippourTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				E76468DB98AE4A96A08BCFC8 /* Resources */,
+				DD21A1D51EB3BFB200005165 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -608,6 +612,14 @@
 				2D02E4901E0B4A5D006451C7 /* Flippour-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DD21A1D51EB3BFB200005165 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD21A1D61EB3BFB200005165 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DD35B2931EAACB0800661C72 /* Products */ = {
