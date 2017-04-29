@@ -3,25 +3,24 @@ const { OS } = Platform;
 
 // ios specific
 const { InAppUtils } = NativeModules;
-const { loadProducts, purchaseProduct } = InAppUtils;
 
 // android specific
 import InAppBilling from "react-native-billing";
 
 class Product {
   // read only
-  requestItems(product) {
+  requestItemsIOS(product) {
     return new Promise((resolve, reject) => {
-      loadProducts([], (err, res) => {
+      InAppUtils.loadProducts([], (err, res) => {
         (err ? () => reject(err) : () => resolve(res))();
       });
     });
   }
 
   // read only
-  requestPurchase(product) {
+  requestPurchaseIOS(product) {
     return new Promise((resolve, reject) => {
-      purchaseProduct(product, (err, res) => {
+      InAppUtils.purchaseProduct(product, (err, res) => {
         (err ? () => reject(err) : () => resolve(res))();
       });
     });
@@ -30,8 +29,8 @@ class Product {
   purchaseIOS(productId) {
     return new Promise(async (resolve, reject) => {
       try {
-        await this.requestItems(productId);
-        resolve(await this.requestPurchase(productId));
+        await this.requestItemsIOS(productId);
+        resolve(await this.requestPurchaseIOS(productId));
       } catch (err) {
         reject(err);
       }

@@ -3,7 +3,7 @@ const initialState = {
     {
       id: {
         ios: "extra_2_5_seconds_per_level",
-        android: "extra_2_5_seconds_per_level"
+        android: "android.test.purchased"
       },
       color: "red",
       title: "2.5s",

@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import { BackHandler } from "react-native";
+import { BackAndroid } from "react-native";
 
 export function AndroidBackDecorator(onBackFunctionName) {
   return DecoratedComponent => class extends Component {
     ref = {};
 
     componentDidMount() {
-      BackHandler.addEventListener("hardwareBackPress", this.onAndroidBack);
+      BackAndroid.addEventListener("hardwareBackPress", this.onAndroidBack);
     }
 
     componentWillUnmount() {
-      BackHandler.removeEventListener("hardwareBackPress", this.onAndroidBack);
+      BackAndroid.removeEventListener("hardwareBackPress", this.onAndroidBack);
     }
 
     onAndroidBack = () => {
