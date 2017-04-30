@@ -9,7 +9,6 @@ let baseTime: number = 10;
 
 // check if user has purchased 2.5 seconds level increase
 async function checkUserPurchasedSettings() {
-  console.log("checkUserPurchasedSettings");
   try {
     const status = await AsyncStorage.getItem("extra_2_5_seconds_per_level");
     baseTime = 12.5;

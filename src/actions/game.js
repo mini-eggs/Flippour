@@ -24,7 +24,6 @@ export function startTimer() {
     const { speed } = getState().GameReducer;
     function timer() {
       const { time } = getState().GameReducer;
-      console.log(time, speed);
       dispatch(setTimer(time - speed));
     }
     timerInterval = setInterval(timer, speed);
