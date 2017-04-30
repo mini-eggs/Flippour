@@ -4,15 +4,16 @@ import { SettingsDecorator } from "../../decorators/settings";
 import { Container, Third, Title, SubTitle } from "./styles";
 
 function format(val) {
-  switch (val.toString().length) {
+  const num = Math.floor(val);
+  switch (num.toString().length) {
     case 0: {
       return "00";
     }
     case 1: {
-      return `0${val}`;
+      return `0${num}`;
     }
     default: {
-      return val.toString();
+      return num.toString();
     }
   }
 }

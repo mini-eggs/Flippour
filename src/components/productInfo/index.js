@@ -59,7 +59,7 @@ export class ProductInfo extends PureComponent {
                 transparent
                 onPress={this.props.back}
               >
-                <Text>Back</Text>
+                <Text style={{ color: modalText.color }}>Back</Text>
               </Button>
             </Left>
             <Body>
@@ -82,7 +82,7 @@ export class ProductInfo extends PureComponent {
               </ProductTitle>
             </ProductHeader>
             <Spacer />
-            <ProductDescription>
+            <ProductDescription style={{ color: text.color }}>
               {this.props.product ? this.props.product.description : null}
             </ProductDescription>
             <Spacer />

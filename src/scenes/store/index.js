@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import { Alert } from "react-native";
 import { Content } from "native-base";
 import { Product } from "../../classes/product";
 import { ProductInfo } from "../../components/";
@@ -8,7 +9,7 @@ import { FluxDecorator } from "../../decorators/flux";
 import { SettingsDecorator } from "../../decorators/settings";
 import { ProductDecorator } from "../../decorators/product";
 import { SingleSquare } from "../start/squareButton";
-import { StoreContainer, Products, Span, Row, Title } from "./styles";
+import { StoreContainer, Products, Span, Row, Title, Empty } from "./styles";
 
 @AndroidBackDecorator()
 @ProductDecorator()
@@ -36,9 +37,10 @@ export class StoreScene extends PureComponent {
     console.log("purchase", this.state.product);
 
     try {
-      await this.product.purchase(this.state.product.id);
+      await this.product.purchase(this.state.product);
+      Alert.alert("Complete, user has purchased product");
     } catch (err) {
-      console.log(err);
+      Alert.alert("Error or user cancelled.");
     } finally {
       this.closeProduct();
     }
@@ -74,11 +76,11 @@ export class StoreScene extends PureComponent {
                   {testProduct.title}
                 </Span>
               </SingleSquare>
-              <SingleSquare />
+              <Empty />
             </Row>
             <Row>
-              <SingleSquare />
-              <SingleSquare />
+              <Empty />
+              <Empty />
             </Row>
           </Products>
         </StoreContainer>

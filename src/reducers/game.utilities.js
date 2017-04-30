@@ -1,7 +1,28 @@
 // @flow
 
+import { AsyncStorage } from "react-native";
 import { saveGame } from "../actions/firebase/";
 import type { GameState, SquareType } from "./game.types";
+
+// this can change based on the user's purchases
+let baseTime: number = 10;
+
+// check if user has purchased 2.5 seconds level increase
+async function checkUserPurchasedSettings() {
+  console.log("checkUserPurchasedSettings");
+  try {
+    const status = await AsyncStorage.getItem("extra_2_5_seconds_per_level");
+    baseTime = 12.5;
+    // if (status !== null) {
+    //   baseTime = 12.5;
+    // }
+  } catch (err) {
+    // not an issue
+    // user does not have purchase
+  }
+}
+
+checkUserPurchasedSettings();
 
 function getColor() {
   const colors = ["red", "blue", "green", "orange"];
@@ -43,7 +64,7 @@ export function getInitialState() {
     fail: false,
     goal: color,
     squares: getSquares(5, 5, color),
-    time: 10 * 1000,
+    time: baseTime * 1000,
     speed: 1000
   };
 }

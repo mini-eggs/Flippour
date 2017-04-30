@@ -1,4 +1,4 @@
-import { NativeModules, Platform } from "react-native";
+import { NativeModules, Platform, AsyncStorage } from "react-native";
 const { OS } = Platform;
 
 // ios specific
@@ -62,11 +62,37 @@ class Product {
     });
   }
 
-  purchase(productIds) {
-    const productId = productIds[OS];
-    return OS === "ios"
-      ? this.purchaseIOS(productId)
-      : this.purchaseAndroid(productId);
+  purchase(product) {
+    const productId = product.id[OS];
+    return new Promise(async (resolve, reject) => {
+      try {
+        const purchaseFunc = OS === "ios"
+          ? this.purchaseIOS
+          : this.purchaseAndroid;
+        const status = await purchaseFunc(productId);
+        await this.savePurchaseToStorage(product);
+        resolve(status);
+      } catch (err) {
+        reject(err);
+      }
+    });
+  }
+
+  savePurchaseToStorage(product) {
+    return AsyncStorage.setItem(product.storageKey, JSON.stringify(product));
+  }
+
+  loadProductsFromStorage(products) {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const itemsFromStorage = await Promise.all(
+          products.map(({ storageKey }) => AsyncStorage.getItem(storageKey))
+        );
+        resolve(itemsFromStorage.map(JSON.parse));
+      } catch (err) {
+        reject(err);
+      }
+    });
   }
 }
 

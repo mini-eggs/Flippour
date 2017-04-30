@@ -19,6 +19,14 @@ export const Products = Styled.View`
   height: ${Dimensions.get("window").width / 2};
 `;
 
+// only because our store lacks products at the moment
+export const Empty = Styled.View`
+  flex: 1;
+  margin: 6;
+  border-width: 2;
+  border-color: transparent;
+`;
+
 export const Row = Styled.View`
   flex: 1;
   flex-direction: row;

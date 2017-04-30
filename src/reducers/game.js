@@ -20,7 +20,8 @@ export function GameReducer(
       const initialState = getInitialState();
       initialState.level = state.level + 1;
       initialState.score = state.score;
-      initialState.time = (10 - Math.floor(state.level / 10)) * 1000;
+      initialState.time =
+        (initialState.time / 1000 - Math.floor(state.level / 10)) * 1000;
       return initialState;
     }
 
