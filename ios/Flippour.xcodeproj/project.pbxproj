@@ -66,6 +66,9 @@
 		C873AEDE62DE43BDB541ABB7 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C56F4CBE4C0E4844A80F1B47 /* Rubik-Black.ttf */; };
 		D4EF73AE3AB042E985DBF818 /* Arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23C095B09EFB400AA400CE6E /* Arial.ttf */; };
 		D9ED92BD52A64EFAA85AD30E /* Skia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C10DE55604A04A6A80DB2173 /* Skia.ttf */; };
+		DD14DAB91EB711B90047E17F /* tap_stop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD14DAB61EB711B90047E17F /* tap_stop.mp3 */; };
+		DD14DABA1EB711B90047E17F /* tap_continue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD14DAB71EB711B90047E17F /* tap_continue.mp3 */; };
+		DD14DABB1EB711B90047E17F /* electro_loop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD14DAB81EB711B90047E17F /* electro_loop.mp3 */; };
 		DD21A1D71EB3BFB200005165 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD21A1D61EB3BFB200005165 /* StoreKit.framework */; };
 		DD35AB431E96BE560058F2C1 /* notification_in.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD35AB411E96BE560058F2C1 /* notification_in.mp3 */; };
 		DD35AB441E96BE560058F2C1 /* notification_out.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD35AB421E96BE560058F2C1 /* notification_out.mp3 */; };
@@ -361,6 +364,9 @@
 		C8F4DEF0608745098338C329 /* Microsoft Sans Serif.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Microsoft Sans Serif.ttf"; path = "../node_modules/native-base/Fonts/Microsoft Sans Serif.ttf"; sourceTree = "<group>"; };
 		CD2A377E95474423B296D9CD /* RNSound.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
 		D7118AB3ABD54F0EBAD22A31 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		DD14DAB61EB711B90047E17F /* tap_stop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tap_stop.mp3; path = ../sounds/tap_stop.mp3; sourceTree = "<group>"; };
+		DD14DAB71EB711B90047E17F /* tap_continue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tap_continue.mp3; path = ../sounds/tap_continue.mp3; sourceTree = "<group>"; };
+		DD14DAB81EB711B90047E17F /* electro_loop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = electro_loop.mp3; path = ../sounds/electro_loop.mp3; sourceTree = "<group>"; };
 		DD21A1D61EB3BFB200005165 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DD35AB411E96BE560058F2C1 /* notification_in.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notification_in.mp3; path = ../sounds/notification_in.mp3; sourceTree = "<group>"; };
 		DD35AB421E96BE560058F2C1 /* notification_out.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = notification_out.mp3; path = ../sounds/notification_out.mp3; sourceTree = "<group>"; };
@@ -587,6 +593,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				DD14DAB61EB711B90047E17F /* tap_stop.mp3 */,
+				DD14DAB71EB711B90047E17F /* tap_continue.mp3 */,
+				DD14DAB81EB711B90047E17F /* electro_loop.mp3 */,
 				DD35AB491E96C54D0058F2C1 /* background_music.mp3 */,
 				DD35AB451E96C2810058F2C1 /* square_correct.mp3 */,
 				DD35AB461E96C2810058F2C1 /* square_incorrect.mp3 */,
@@ -1089,8 +1098,10 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				DD14DABA1EB711B90047E17F /* tap_continue.mp3 in Resources */,
 				DD35AB441E96BE560058F2C1 /* notification_out.mp3 in Resources */,
 				8222246D719343FEAE08CEF4 /* Andale Mono.ttf in Resources */,
+				DD14DABB1EB711B90047E17F /* electro_loop.mp3 in Resources */,
 				A22398D3C47E49C58AB9B05D /* Arial Black.ttf in Resources */,
 				D4EF73AE3AB042E985DBF818 /* Arial.ttf in Resources */,
 				28CC9576BC8C4ECDA68D6648 /* Comic Sans MS.ttf in Resources */,
@@ -1127,6 +1138,7 @@
 				BAF9118174A8413B95934AE3 /* SF-UI-Text-Regular.otf in Resources */,
 				D9ED92BD52A64EFAA85AD30E /* Skia.ttf in Resources */,
 				B2DB22EE898C4DDCB881A9F3 /* Times New Roman.ttf in Resources */,
+				DD14DAB91EB711B90047E17F /* tap_stop.mp3 in Resources */,
 				E7745F51D0BB4DE78393A4F8 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
