@@ -79,7 +79,8 @@ export class SettingsScene extends PureComponent {
 
   saveSettings = () => {
     this.props.saveSettings(this.state);
-    this.props.restartApplication();
+    // this.props.restartApplication();
+    this.props.pop();
   };
 
   render() {

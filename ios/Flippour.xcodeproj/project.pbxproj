@@ -74,6 +74,7 @@
 		DD35AB471E96C2810058F2C1 /* square_correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD35AB451E96C2810058F2C1 /* square_correct.mp3 */; };
 		DD35AB481E96C2810058F2C1 /* square_incorrect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD35AB461E96C2810058F2C1 /* square_incorrect.mp3 */; };
 		DD35AB4A1E96C54D0058F2C1 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD35AB491E96C54D0058F2C1 /* background_music.mp3 */; };
+		DDA9EC6C1EB780E100DB0912 /* game_complete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDA9EC6B1EB780E100DB0912 /* game_complete.mp3 */; };
 		E3FAD41A90274490ADD561C4 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35A4148DDAFB4FCEBCDD1409 /* Rubik-Italic.ttf */; };
 		E7745F51D0BB4DE78393A4F8 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0FB1562E94C4AAEB0D8E771 /* Zocial.ttf */; };
 		EFC38FB542304F018176E6F4 /* Courier New.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EB75970A43E413E8911640C /* Courier New.ttf */; };
@@ -81,7 +82,6 @@
 		F53229D7BB8F4202829480E1 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B8B74DD36C4CDE91BDF308 /* Roboto.ttf */; };
 		FD857CE3FE96488F9E4D524C /* SanFranciscoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6755F3F625441A4B17FFFC6 /* SanFranciscoBold.ttf */; };
 		FFAE6BEA453F4C89B7DCD5CD /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7118AB3ABD54F0EBAD22A31 /* Octicons.ttf */; };
-		E39A2B37D86B490BA27B48CF /* libRCTRestart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8374CC11AFDF425794CF7137 /* libRCTRestart.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -373,13 +373,12 @@
 		DD35AB451E96C2810058F2C1 /* square_correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = square_correct.mp3; path = ../sounds/square_correct.mp3; sourceTree = "<group>"; };
 		DD35AB461E96C2810058F2C1 /* square_incorrect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = square_incorrect.mp3; path = ../sounds/square_incorrect.mp3; sourceTree = "<group>"; };
 		DD35AB491E96C54D0058F2C1 /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = background_music.mp3; path = ../sounds/background_music.mp3; sourceTree = "<group>"; };
+		DDA9EC6B1EB780E100DB0912 /* game_complete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = game_complete.mp3; path = ../sounds/game_complete.mp3; sourceTree = "<group>"; };
 		E413B4F871044917B2145C3E /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-MediumItalic.ttf"; path = "../node_modules/native-base/Fonts/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		EBF94C1EBC8241AD99F749FA /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		EC0B57FC533042E7BA3F2079 /* Andale Mono.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Andale Mono.ttf"; path = "../node_modules/native-base/Fonts/Andale Mono.ttf"; sourceTree = "<group>"; };
 		FC3F30CC2506475BA33F8EFE /* Rubik-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Bold.ttf"; path = "../node_modules/native-base/Fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		FC69B6C026184634B8D3B846 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
-		EDBEC595F9514EE1B806DA77 /* RCTRestart.xcodeproj */ = {isa = PBXFileReference; name = "RCTRestart.xcodeproj"; path = "../node_modules/react-native-restart/ios/RCTRestart.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		8374CC11AFDF425794CF7137 /* libRCTRestart.a */ = {isa = PBXFileReference; name = "libRCTRestart.a"; path = "libRCTRestart.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,7 +409,6 @@
 				47F1221823E94E37B8E4829C /* libInAppUtils.a in Frameworks */,
 				9B269D464ACE47708FAA5D62 /* libRNSound.a in Frameworks */,
 				6043267C77AA411E9C637988 /* libRNDeviceInfo.a in Frameworks */,
-				E39A2B37D86B490BA27B48CF /* libRCTRestart.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,7 +578,6 @@
 				5A2376C3FCC349D3BCB09E2F /* InAppUtils.xcodeproj */,
 				CD2A377E95474423B296D9CD /* RNSound.xcodeproj */,
 				3C3D0070BE414ABDAC79DAEF /* RNDeviceInfo.xcodeproj */,
-				EDBEC595F9514EE1B806DA77 /* RCTRestart.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -597,6 +594,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				DDA9EC6B1EB780E100DB0912 /* game_complete.mp3 */,
 				DD14DAB61EB711B90047E17F /* tap_stop.mp3 */,
 				DD14DAB71EB711B90047E17F /* tap_continue.mp3 */,
 				DD14DAB81EB711B90047E17F /* electro_loop.mp3 */,
@@ -782,7 +780,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 610;
+				LastUpgradeCheck = 830;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -1110,6 +1108,7 @@
 				D4EF73AE3AB042E985DBF818 /* Arial.ttf in Resources */,
 				28CC9576BC8C4ECDA68D6648 /* Comic Sans MS.ttf in Resources */,
 				EFC38FB542304F018176E6F4 /* Courier New.ttf in Resources */,
+				DDA9EC6C1EB780E100DB0912 /* game_complete.mp3 in Resources */,
 				DD35AB4A1E96C54D0058F2C1 /* background_music.mp3 in Resources */,
 				8776951D9DC44C678DF7E557 /* Entypo.ttf in Resources */,
 				8E2816BE7C1A4039965EA26B /* EvilIcons.ttf in Resources */,
@@ -1271,21 +1270,18 @@
 					"$(SRCROOT)/../node_modules/react-native-in-app-utils/InAppUtils",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = FlippourTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flippour.app/Flippour";
 			};
@@ -1301,21 +1297,18 @@
 					"$(SRCROOT)/../node_modules/react-native-in-app-utils/InAppUtils",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = FlippourTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flippour.app/Flippour";
 			};
@@ -1333,7 +1326,6 @@
 					"$(SRCROOT)/../node_modules/react-native-in-app-utils/InAppUtils",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = Flippour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1359,7 +1351,6 @@
 					"$(SRCROOT)/../node_modules/react-native-in-app-utils/InAppUtils",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = Flippour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1391,15 +1382,11 @@
 					"$(SRCROOT)/../node_modules/react-native-in-app-utils/InAppUtils",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = "Flippour-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1430,15 +1417,11 @@
 					"$(SRCROOT)/../node_modules/react-native-in-app-utils/InAppUtils",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = "Flippour-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1467,9 +1450,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Flippour-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1494,9 +1474,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Flippour-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1519,15 +1496,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1560,8 +1541,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1569,6 +1552,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

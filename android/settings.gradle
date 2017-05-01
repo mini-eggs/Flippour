@@ -1,6 +1,4 @@
 rootProject.name = 'Flippour'
-include ':react-native-restart'
-project(':react-native-restart').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-restart/android')
 include ':react-native-billing'
 project(':react-native-billing').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-billing/android')
 include ':react-native-device-info'
