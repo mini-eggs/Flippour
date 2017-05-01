@@ -30,18 +30,17 @@ export class GameScene extends PureComponent {
     const soundsEnabled = this.props.settings.soundsEnabled;
     this.sounds = {
       background: new Sound(
-        "background_music",
+        "electro_loop",
         soundsEnabled,
         this.startBackgroundMusic
-      ),
-      complete: new Sound("notification_in", soundsEnabled),
-      fail: new Sound("notification_out", soundsEnabled)
+      )
     };
     this.props.begin();
   };
 
   startBackgroundMusic = () => {
     this.sounds.background.loop();
+    this.sounds.background.fadeIn(0, 1);
     this.sounds.background.play();
   };
 
@@ -56,10 +55,8 @@ export class GameScene extends PureComponent {
   componentWillReceiveProps = ({ fail, complete, nextLevel }) => {
     if (fail) {
       this.sounds.background.stop();
-      this.sounds.fail.play();
       setTimeout(this.backOrShowModal, 1500);
     } else if (complete) {
-      this.sounds.complete.play();
       setTimeout(nextLevel, 1250);
     }
   };

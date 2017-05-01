@@ -79,7 +79,7 @@ export class SettingsScene extends PureComponent {
 
   saveSettings = () => {
     this.props.saveSettings(this.state);
-    this.props.pop();
+    this.props.restartApplication();
   };
 
   render() {
@@ -141,7 +141,7 @@ export class SettingsScene extends PureComponent {
 
           <Space />
 
-          {/*<Title style={[text, { textAlign: "left" }]}>
+          <Title style={[text, { textAlign: "left" }]}>
             Sounds
           </Title>
           <ListItem style={{ borderColor: "transparent" }}>
@@ -154,7 +154,7 @@ export class SettingsScene extends PureComponent {
             </Span>
           </ListItem>
 
-          <Space />*/}
+          <Space />
 
           <Center>
             <Button onPress={this.saveSettings} style={button}>

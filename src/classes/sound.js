@@ -14,4 +14,13 @@ export class Sound {
   play = () => this.sound.play();
 
   stop = () => this.sound.stop();
+
+  fadeIn = (volume = 0, max = 0.5) => {
+    this.sound.setVolume(volume);
+    if (volume !== 1 && volume <= max) {
+      setTimeout(() => {
+        this.fadeIn(volume + 0.1, max);
+      }, 100);
+    }
+  };
 }

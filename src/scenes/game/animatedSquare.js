@@ -27,8 +27,8 @@ export class AnimatedSquare extends PureComponent {
       rotate: new Animated.Value(initial.rotate)
     };
     this.sounds = {
-      correct: new Sound("square_correct", props.settings.soundsEnabled),
-      incorrect: new Sound("square_incorrect", props.settings.soundsEnabled)
+      correct: new Sound("tap_continue", props.settings.soundsEnabled),
+      incorrect: new Sound("tap_stop", props.settings.soundsEnabled)
     };
   }
 

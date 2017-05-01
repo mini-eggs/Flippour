@@ -1,6 +1,8 @@
 import React, { PureComponent } from "react";
-import { Animated } from "react-native";
+import { Animated, Alert } from "react-native";
+import { Sound } from "../../classes/sound";
 import { sequence, parallel, animate } from "../game/animatedSquare.utilities";
+import { SettingsDecorator } from "../../decorators/settings";
 
 const initial = {
   scale: 1,
@@ -8,17 +10,33 @@ const initial = {
   rotate: 0
 };
 
+@SettingsDecorator()
 export class SingleSquare extends PureComponent {
-  state = {
-    opacity: new Animated.Value(initial.opacity),
-    scale: new Animated.Value(initial.scale),
-    rotate: new Animated.Value(initial.rotate)
-  };
+  constructor(props) {
+    super(props);
 
-  animatingStatus = false;
+    this.state = {
+      opacity: new Animated.Value(initial.opacity),
+      scale: new Animated.Value(initial.scale),
+      rotate: new Animated.Value(initial.rotate)
+    };
+
+    this.sounds = {
+      continue: new Sound("tap_continue", props.settings.soundsEnabled)
+    };
+
+    this.animatingStatus = false;
+  }
+
+  componentWillReceiveProps({ settings }) {
+    this.sounds = {
+      continue: new Sound("tap_continue", settings.soundsEnabled)
+    };
+  }
 
   onPress = fn => () => {
     if (this.animatingStatus) return;
+    this.sounds.continue.play();
     this.animatingStatus = true;
     parallel([
       sequence([
