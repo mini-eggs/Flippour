@@ -1,5 +1,8 @@
 import { NativeModules, Platform, AsyncStorage } from "react-native";
+import { checkUserPurchasedSettings } from "../reducers/game.utilities";
 const { OS } = Platform;
+
+// AsyncStorage.removeItem("extra_2_5_seconds_per_level"); // for testing
 
 // ios specific
 const { InAppUtils } = NativeModules;
@@ -62,6 +65,17 @@ class Product {
     });
   }
 
+  purchaseCustomActions(type) {
+    switch (type) {
+      case "ADD_2_5_TO_INITIAL_GAME_TIM": {
+        checkUserPurchasedSettings();
+      }
+      default: {
+        break;
+      }
+    }
+  }
+
   purchase(product) {
     const productId = product.id[OS];
     return new Promise(async (resolve, reject) => {
@@ -69,8 +83,10 @@ class Product {
         const purchaseFunc = OS === "ios"
           ? this.purchaseIOS
           : this.purchaseAndroid;
-        const status = await purchaseFunc(productId);
+        // const status = await purchaseFunc(productId);
+        const status = true; // testing for app store
         await this.savePurchaseToStorage(product);
+        this.purchaseCustomActions(product.type);
         resolve(status);
       } catch (err) {
         reject(err);
@@ -89,6 +105,17 @@ class Product {
           products.map(({ storageKey }) => AsyncStorage.getItem(storageKey))
         );
         resolve(itemsFromStorage.map(JSON.parse));
+      } catch (err) {
+        reject(err);
+      }
+    });
+  }
+
+  alreadyPurchased({ storageKey }) {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const status = await AsyncStorage.getItem(storageKey);
+        resolve(status !== null);
       } catch (err) {
         reject(err);
       }

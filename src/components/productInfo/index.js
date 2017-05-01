@@ -89,7 +89,7 @@ export class ProductInfo extends PureComponent {
             <Center>
               <PurchaseButton onPress={this.props.complete} style={button}>
                 <Span style={buttonText}>
-                  Purchase
+                  {this.props.buttonText}
                 </Span>
               </PurchaseButton>
             </Center>

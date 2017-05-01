@@ -19,38 +19,61 @@ import { StoreContainer, Products, Span, Row, Title, Empty } from "./styles";
 export class StoreScene extends PureComponent {
   state = {
     showModal: false,
-    product: null
+    product: null,
+    buttonText: "Purchase",
+    isAllowedToPurchase: true
   };
 
   product = new Product();
 
-  showProduct = product => () => {
-    this.setState(() => {
-      return {
-        showModal: true,
-        product: product
-      };
-    });
+  showProduct = product => async () => {
+    try {
+      const status = await this.product.alreadyPurchased(product);
+      this.setState(() => {
+        return {
+          showModal: true,
+          product: product,
+          buttonText: status ? "Already Purchased" : "Purchase",
+          isAllowedToPurchase: !status
+        };
+      });
+    } catch (err) {
+      // if (__DEV__) console.log(err);
+    }
   };
 
   purchaseProduct = async () => {
-    console.log("purchase", this.state.product);
+    if (!this.state.isAllowedToPurchase) {
+      this.closeProduct();
+      return;
+    }
+
+    // console.log("purchase", this.state.product);
 
     try {
       await this.product.purchase(this.state.product);
-      Alert.alert("Complete, user has purchased product");
+      this.purhcaseCompleteAlert(this.state.product);
+      // Alert.alert("Complete, user has purchased product");
     } catch (err) {
-      Alert.alert("Error or user cancelled.");
+      // Alert.alert("Error or user cancelled.");
     } finally {
       this.closeProduct();
     }
   };
 
+  purhcaseCompleteAlert(product) {
+    setTimeout(() => {
+      Alert.alert(`Congrats! "${product.title}" has been purchased.`);
+    }, 1000);
+  }
+
   closeProduct = () => {
     this.setState(() => {
       return {
         showModal: false,
-        product: null
+        product: null,
+        buttonText: "purchase",
+        isAllowedToPurchase: true
       };
     });
   };
@@ -85,6 +108,7 @@ export class StoreScene extends PureComponent {
           </Products>
         </StoreContainer>
         <ProductInfo
+          buttonText={this.state.buttonText}
           show={this.state.showModal}
           product={this.state.product}
           back={this.closeProduct}

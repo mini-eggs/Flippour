@@ -8,13 +8,13 @@ import type { GameState, SquareType } from "./game.types";
 let baseTime: number = 10;
 
 // check if user has purchased 2.5 seconds level increase
-async function checkUserPurchasedSettings() {
+export async function checkUserPurchasedSettings() {
   try {
     const status = await AsyncStorage.getItem("extra_2_5_seconds_per_level");
-    baseTime = 12.5;
-    // if (status !== null) {
-    //   baseTime = 12.5;
-    // }
+    // baseTime = 12.5; // used for testing
+    if (status !== null) {
+      baseTime = 12.5;
+    }
   } catch (err) {
     // not an issue
     // user does not have purchase
