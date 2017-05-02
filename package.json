@@ -20,6 +20,7 @@
 		"native-base": "git://github.com/mini-eggs/NativeBase.git#ff7bef47de2d5645bc9a3afab21a07de4ed70549",
 		"react": "16.0.0-alpha.6",
 		"react-native": "^0.43.4",
+		"react-native-actionsheet": "^2.1.0",
 		"react-native-billing": "^2.3.0",
 		"react-native-device-info": "^0.10.1",
 		"react-native-in-app-utils": "^5.2.3",

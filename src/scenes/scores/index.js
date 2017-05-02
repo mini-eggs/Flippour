@@ -36,7 +36,7 @@ function getUsername(username) {
 export class ScoresScene extends Component {
   render() {
     const { scores, featured, subtitle } = this.props;
-    let feat = featured ? featured : { level: 0, score: 0 };
+    let feat = featured ? featured : { level: 0, score: 0, username: "" };
 
     const { container, title, text } = this.props.settings.theme;
 
@@ -55,6 +55,9 @@ export class ScoresScene extends Component {
               </FeaturedScoreText>
               <FeaturedScoreText style={text}>
                 lvl {feat.level.toString()}
+              </FeaturedScoreText>
+              <FeaturedScoreText style={text}>
+                {getUsername(feat.username)}
               </FeaturedScoreText>
             </FeaturedDetails>
             <FeaturedScore style={text}>{feat.score.toString()}</FeaturedScore>

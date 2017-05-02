@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import { Alert } from "react-native";
 import { Content } from "native-base";
+import ActionSheet from "react-native-actionsheet";
 import { Product } from "../../classes/product";
 import { ProductInfo } from "../../components/";
 import { AndroidBackDecorator } from "../../decorators/androidBack";
@@ -21,7 +22,8 @@ export class StoreScene extends PureComponent {
     showModal: false,
     product: null,
     buttonText: "Purchase",
-    isAllowedToPurchase: true
+    isAllowedToPurchase: true,
+    options: ["Restore purchase", "Cancel"]
   };
 
   product = new Product();
@@ -61,6 +63,24 @@ export class StoreScene extends PureComponent {
     }
   };
 
+  restoreProduct = async () => {
+    try {
+      await this.product.restore(this.state.product);
+      // Alert.alert("Complete, user has purchased product");
+    } catch (err) {
+      // Alert.alert("Error or user cancelled.");
+    } finally {
+      this.purchaseRestored(this.state.product);
+      this.closeProduct();
+    }
+  };
+
+  purchaseRestored(product) {
+    setTimeout(() => {
+      Alert.alert(`Complete! "${product.title}" has been restored.`);
+    }, 1000);
+  }
+
   purhcaseCompleteAlert(product) {
     setTimeout(() => {
       Alert.alert(`Congrats! "${product.title}" has been purchased.`);
@@ -76,6 +96,24 @@ export class StoreScene extends PureComponent {
         isAllowedToPurchase: true
       };
     });
+  };
+
+  showOptions = () => {
+    this.ActionSheet.show();
+  };
+
+  handleOptions = index => {
+    switch (index) {
+      case 0: {
+        this.restoreProduct();
+        break;
+      }
+      case 1:
+      default: {
+        // user has cancelled
+        break;
+      }
+    }
   };
 
   render() {
@@ -113,6 +151,13 @@ export class StoreScene extends PureComponent {
           product={this.state.product}
           back={this.closeProduct}
           complete={this.purchaseProduct}
+          onRight={this.showOptions}
+        />
+        <ActionSheet
+          ref={o => this.ActionSheet = o}
+          options={this.state.options}
+          cancelButtonIndex={this.state.options.length - 1}
+          onPress={this.handleOptions}
         />
       </Content>
     );

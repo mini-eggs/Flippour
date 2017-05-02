@@ -3307,6 +3307,10 @@ react-devtools-core@^2.0.8:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-actionsheet@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-actionsheet/-/react-native-actionsheet-2.1.0.tgz#e1b58bd951f4fcc1c5ebbb769fff5c693f12e23a"
+
 react-native-billing@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/react-native-billing/-/react-native-billing-2.3.0.tgz#e5d932a1285202174328b2ebba02d3155e84abaf"

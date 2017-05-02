@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { Modal } from "react-native";
+import { Modal, Platform } from "react-native";
 import {
   Container,
   Header,
@@ -9,7 +9,8 @@ import {
   Title,
   Content,
   Button,
-  Text
+  Text,
+  Icon
 } from "native-base";
 import { AndroidBackDecorator } from "../../decorators/androidBack";
 import { SettingsDecorator } from "../../decorators/settings";
@@ -67,7 +68,16 @@ export class ProductInfo extends PureComponent {
                 Purchase
               </Title>
             </Body>
-            <Right />
+            {Platform.OS === "ios"
+              ? <Right>
+                  <Button
+                    onPress={this.props.onRight}
+                    style={{ backgroundColor: "transparent" }}
+                  >
+                    <Icon color={modalText.color} name="ios-more" />
+                  </Button>
+                </Right>
+              : <Right />}
           </Header>
           <Content>
             <ProductHeader

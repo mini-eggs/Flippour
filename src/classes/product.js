@@ -94,6 +94,10 @@ class Product {
     });
   }
 
+  restore(product) {
+    this.purchase(product);
+  }
+
   savePurchaseToStorage(product) {
     return AsyncStorage.setItem(product.storageKey, JSON.stringify(product));
   }
