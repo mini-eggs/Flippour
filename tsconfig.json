@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "ESNEXT", /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'. */
+        "module": "es2015", /* Specify module code generation: 'commonjs', 'amd', 'system', 'umd' or 'es2015'. */
+        "lib": [],
+        "allowJs": true,
+        "checkJs": false,
+        "jsx": "react-native",
+        "sourceMap": false,
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "removeComments": true,
+        "strict": false,
+        "noImplicitAny": false,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": []
+}

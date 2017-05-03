@@ -2,6 +2,7 @@ android/.gradle/gradle.properties
 android/gradle.properties
 android/app/flippour-release-key.keystore
 src/keys/index.js
+dist
 
 # OSX
 #
