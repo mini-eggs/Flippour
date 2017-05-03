@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { Modal, Platform } from "react-native";
+import { Modal, Platform, Dimensions } from "react-native";
 import {
   Container,
   Header,
@@ -79,7 +79,7 @@ export class ProductInfo extends PureComponent {
                 </Right>
               : <Right />}
           </Header>
-          <Content>
+          <Content style={{ maxWidth: Dimensions.get("window").width }}>
             <ProductHeader
               style={{
                 backgroundColor: this.props.product

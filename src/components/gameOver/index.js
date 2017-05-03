@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { Modal } from "react-native";
+import { Modal, Dimensions } from "react-native";
 import {
   Container,
   Header,
@@ -72,7 +72,7 @@ export class GameOver extends PureComponent {
             </Body>
             <Right />
           </Header>
-          <Content>
+          <Content style={{ maxWidth: Dimensions.get("window").width }}>
             <Spacer />
             <Spacer />
             <GameOverTitle style={title}>

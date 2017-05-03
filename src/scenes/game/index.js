@@ -59,8 +59,8 @@ export class GameScene extends PureComponent {
 
   componentWillReceiveProps = ({ fail, complete, nextLevel }) => {
     if (fail) {
-      this.sounds.gameComplete.play();
       this.sounds.background.stop();
+      this.sounds.gameComplete.play();
       setTimeout(this.backOrShowModal, 1500);
     } else if (complete) {
       setTimeout(nextLevel, 1250);
