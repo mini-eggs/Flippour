@@ -1,4 +1,4 @@
 import { AppRegistry } from "react-native";
-import { Flippour } from "./src/";
+import { Flippour } from "./dist/";
 
 AppRegistry.registerComponent("Flippour", () => Flippour);

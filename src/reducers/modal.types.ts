@@ -1,5 +1,3 @@
-// @flow
-
 type SingleMessage = {
   time: number,
   text: string
@@ -7,11 +5,11 @@ type SingleMessage = {
 
 export type MessagesType = Array<SingleMessage>;
 
-export type StateType = {
+export interface StateType {
   messages: MessagesType
-};
+}
 
-export type ActionType = {
+export interface ActionType {
   type: string,
   payload: SingleMessage
-};
+}

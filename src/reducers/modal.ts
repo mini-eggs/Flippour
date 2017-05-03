@@ -1,6 +1,4 @@
-// @flow
-
-import type { MessagesType, StateType, ActionType } from "./modal.types";
+import { MessagesType, StateType, ActionType } from "./modal.types";
 
 const initialState: StateType = {
   messages: []
