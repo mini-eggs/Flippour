@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { Dimensions } from "react-native";
+import { Dimensions, InteractionManager } from "react-native";
 import { GameOver } from "../../components/";
 import { Sound } from "../../classes/sound";
 import { FluxDecorator } from "../../decorators/flux";
@@ -26,7 +26,12 @@ export class GameScene extends PureComponent {
     };
   }
 
-  componentWillMount = () => {
+  componentDidMount = () => {
+    InteractionManager.runAfterInteractions(this.loadSounds);
+    this.props.begin();
+  };
+
+  loadSounds = () => {
     const soundsEnabled = this.props.settings.soundsEnabled;
     this.sounds = {
       background: new Sound(
@@ -40,7 +45,6 @@ export class GameScene extends PureComponent {
         this.startBackgroundMusic
       )
     };
-    this.props.begin();
   };
 
   startBackgroundMusic = () => {

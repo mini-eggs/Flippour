@@ -2,7 +2,7 @@ import { NativeModules, Platform, AsyncStorage } from "react-native";
 import { checkUserPurchasedSettings } from "../reducers/game.utilities";
 const { OS } = Platform;
 
-// AsyncStorage.removeItem("extra_2_5_seconds_per_level"); // for testing
+AsyncStorage.removeItem("extra_2_5_seconds_per_level"); // for testing
 
 // ios specific
 const { InAppUtils } = NativeModules;
@@ -11,7 +11,6 @@ const { InAppUtils } = NativeModules;
 import InAppBilling from "react-native-billing";
 
 class Product {
-  // read only
   requestItemsIOS(product) {
     return new Promise((resolve, reject) => {
       InAppUtils.loadProducts([], (err, res) => {
@@ -20,23 +19,26 @@ class Product {
     });
   }
 
-  // read only
-  requestPurchaseIOS(product) {
-    return new Promise((resolve, reject) => {
-      InAppUtils.purchaseProduct(product, (err, res) => {
-        (err ? () => reject(err) : () => resolve(res))();
-      });
-    });
-  }
-
   purchaseIOS(productId) {
     return new Promise(async (resolve, reject) => {
-      try {
-        await this.requestItemsIOS(productId);
-        resolve(await this.requestPurchaseIOS(productId));
-      } catch (err) {
-        reject(err);
-      }
+      InAppUtils.loadProducts([productId], (err, products) => {
+        console.log("err", err);
+        console.log("products", products);
+        if (err) {
+          reject(err);
+        } else {
+          InAppUtils.purchaseProduct(productId, (err, response) => {
+            console.log("product id", productId);
+            console.log("err", err);
+            console.log("response", response);
+            if (err) {
+              reject(err);
+            } else {
+              resolve(response);
+            }
+          });
+        }
+      });
     });
   }
 
@@ -83,8 +85,9 @@ class Product {
         const purchaseFunc = OS === "ios"
           ? this.purchaseIOS
           : this.purchaseAndroid;
-        // const status = await purchaseFunc(productId);
-        const status = true; // testing for app store
+        const status = await purchaseFunc(productId);
+        console.log("status", status);
+        // const status = true; // testing for app store
         await this.savePurchaseToStorage(product);
         this.purchaseCustomActions(product.type);
         resolve(status);
