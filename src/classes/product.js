@@ -2,7 +2,7 @@ import { NativeModules, Platform, AsyncStorage } from "react-native";
 import { checkUserPurchasedSettings } from "../reducers/game.utilities";
 const { OS } = Platform;
 
-AsyncStorage.removeItem("extra_2_5_seconds_per_level"); // for testing
+// AsyncStorage.removeItem("extra_2_5_seconds_per_level"); // for testing
 
 // ios specific
 const { InAppUtils } = NativeModules;
@@ -22,15 +22,10 @@ class Product {
   purchaseIOS(productId) {
     return new Promise(async (resolve, reject) => {
       InAppUtils.loadProducts([productId], (err, products) => {
-        console.log("err", err);
-        console.log("products", products);
         if (err) {
           reject(err);
         } else {
           InAppUtils.purchaseProduct(productId, (err, response) => {
-            console.log("product id", productId);
-            console.log("err", err);
-            console.log("response", response);
             if (err) {
               reject(err);
             } else {
@@ -87,7 +82,6 @@ class Product {
           : this.purchaseAndroid;
         const status = await purchaseFunc(productId);
         console.log("status", status);
-        // const status = true; // testing for app store
         await this.savePurchaseToStorage(product);
         this.purchaseCustomActions(product.type);
         resolve(status);
@@ -98,7 +92,28 @@ class Product {
   }
 
   restore(product) {
-    this.purchase(product);
+    const productId = product.id[OS];
+    return new Promise((resolve, reject) => {
+      InAppUtils.restorePurchases((err, response) => {
+        if (err) {
+          reject(err);
+        } else {
+          if (response.length === 0) {
+            reject("No product have been purchased.");
+          }
+          response.forEach(({ productIdentifier }) => {
+            if (productIdentifier === productId) {
+              this.savePurchaseToStorage(product)
+                .then(() => {
+                  this.purchaseCustomActions(product.type);
+                  resolve();
+                })
+                .catch(reject);
+            }
+          });
+        }
+      });
+    });
   }
 
   savePurchaseToStorage(product) {

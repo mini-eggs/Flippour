@@ -26,11 +26,6 @@ export class GameScene extends PureComponent {
     };
   }
 
-  componentDidMount = () => {
-    InteractionManager.runAfterInteractions(this.loadSounds);
-    this.props.begin();
-  };
-
   loadSounds = () => {
     const soundsEnabled = this.props.settings.soundsEnabled;
     this.sounds = {
@@ -55,7 +50,12 @@ export class GameScene extends PureComponent {
 
   componentDidMount = () => {
     this.mounted = true;
+    InteractionManager.runAfterInteractions(this.loadSounds);
   };
+
+  componentWillMount = () => {
+    this.props.begin();
+  }
 
   componentWillUnmount = () => {
     this.mounted = false;

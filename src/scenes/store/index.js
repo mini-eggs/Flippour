@@ -66,26 +66,15 @@ export class StoreScene extends PureComponent {
   restoreProduct = async () => {
     try {
       await this.product.restore(this.state.product);
-      // Alert.alert("Complete, user has purchased product");
+      Alert.alert("Complete", "Product has been restored.", [
+        { text: "OK", onPress: () => this.closeProduct() }
+      ]);
     } catch (err) {
-      // Alert.alert("Error or user cancelled.");
-    } finally {
-      this.purchaseRestored(this.state.product);
-      this.closeProduct();
+      Alert.alert("Error", "You have not purchased this product.", [
+        { text: "OK", onPress: () => this.closeProduct() }
+      ]);
     }
   };
-
-  purchaseRestored(product) {
-    setTimeout(() => {
-      Alert.alert(`Complete! "${product.title}" has been restored.`);
-    }, 1000);
-  }
-
-  purhcaseCompleteAlert(product) {
-    setTimeout(() => {
-      Alert.alert(`Congrats! "${product.title}" has been purchased.`);
-    }, 1000);
-  }
 
   closeProduct = () => {
     this.setState(() => {
