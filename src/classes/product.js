@@ -1,6 +1,7 @@
 import { NativeModules, Platform, AsyncStorage } from "react-native";
 import { checkUserPurchasedSettings } from "../reducers/game.utilities";
 const { OS } = Platform;
+import { FlippourError } from "./error";
 
 // AsyncStorage.removeItem("extra_2_5_seconds_per_level"); // for testing
 
@@ -42,22 +43,20 @@ class Product {
       await InAppBilling.close();
       try {
         await InAppBilling.open();
-        if (!await InAppBilling.isPurchased(productId)) {
+        if (await InAppBilling.isPurchased(productId)) {
+          await InAppBilling.close();
+          const aError = new FlippourError();
+          reject(aError.createError("Product has already been purchased."));
+        } else {
           const details = await InAppBilling.purchase(productId);
-          console.log("You purchased: ", details);
+          await InAppBilling.getPurchaseTransactionDetails(productId);
+          await InAppBilling.getProductDetails(productId);
+          await InAppBilling.consumePurchase(productId);
+          await InAppBilling.close();
+          resolve();
         }
-        const transactionStatus = await InAppBilling.getPurchaseTransactionDetails(
-          productId
-        );
-        console.log("Transaction Status", transactionStatus);
-        const productDetails = await InAppBilling.getProductDetails(productId);
-        console.log(productDetails);
       } catch (err) {
         reject(err);
-      } finally {
-        await InAppBilling.consumePurchase(productId);
-        await InAppBilling.close();
-        resolve();
       }
     });
   }
@@ -66,6 +65,7 @@ class Product {
     switch (type) {
       case "ADD_2_5_TO_INITIAL_GAME_TIM": {
         checkUserPurchasedSettings();
+        break;
       }
       default: {
         break;
@@ -81,7 +81,6 @@ class Product {
           ? this.purchaseIOS
           : this.purchaseAndroid;
         const status = await purchaseFunc(productId);
-        console.log("status", status);
         await this.savePurchaseToStorage(product);
         this.purchaseCustomActions(product.type);
         resolve(status);
@@ -99,7 +98,7 @@ class Product {
           reject(err);
         } else {
           if (response.length === 0) {
-            reject("No product have been purchased.");
+            reject("No products have been purchased.");
           }
           response.forEach(({ productIdentifier }) => {
             if (productIdentifier === productId) {

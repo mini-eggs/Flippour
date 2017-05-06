@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { Dimensions, InteractionManager } from "react-native";
+import { Dimensions } from "react-native";
 import { GameOver } from "../../components/";
 import { Sound } from "../../classes/sound";
 import { FluxDecorator } from "../../decorators/flux";
@@ -50,12 +50,12 @@ export class GameScene extends PureComponent {
 
   componentDidMount = () => {
     this.mounted = true;
-    InteractionManager.runAfterInteractions(this.loadSounds);
+    this.loadSounds();
   };
 
   componentWillMount = () => {
     this.props.begin();
-  }
+  };
 
   componentWillUnmount = () => {
     this.mounted = false;

@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import { Alert } from "react-native";
 import { Content } from "native-base";
 import ActionSheet from "react-native-actionsheet";
+import { FlippourError } from "../../classes/error";
 import { Product } from "../../classes/product";
 import { ProductInfo } from "../../components/";
 import { AndroidBackDecorator } from "../../decorators/androidBack";
@@ -50,16 +51,19 @@ export class StoreScene extends PureComponent {
       return;
     }
 
-    // console.log("purchase", this.state.product);
-
     try {
       await this.product.purchase(this.state.product);
-      this.purhcaseCompleteAlert(this.state.product);
-      // Alert.alert("Complete, user has purchased product");
-    } catch (err) {
-      // Alert.alert("Error or user cancelled.");
-    } finally {
       this.closeProduct();
+    } catch (err) {
+      const aError = new FlippourError();
+      if (aError.isFlippourError(err)) {
+        Alert.alert("Error", err.message);
+      } else {
+        Alert.alert("Error", aError.generalError(), {
+          text: "OK",
+          onPress: () => this.closeProduct()
+        });
+      }
     }
   };
 
