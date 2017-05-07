@@ -90,8 +90,8 @@ android {
         applicationId "com.flippour"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 15
-        versionName "15.0"
+        versionCode 18
+        versionName "18.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }

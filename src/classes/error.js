@@ -16,7 +16,7 @@ export class FlippourError {
     if (
       something.type !== "undefined" && something.someMessage !== "undefined"
     ) {
-      if (someting.type === someNum && something.someMessage === someMessage) {
+      if (something.type === someNum && something.someMessage === someMessage) {
         return true;
       } else {
         return false;
