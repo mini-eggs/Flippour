@@ -17,12 +17,13 @@ import { SettingsDecorator } from "../../decorators/settings";
 import { FluxDecorator } from "../../decorators/flux";
 import {
   Spacer,
-  ProductTitle,
-  ProductDescription,
   PurchaseButton,
   Span,
   Center,
-  ProductHeader
+  ProductSubtitle,
+  ProductSquare,
+  ProductImage,
+  ProductBody
 } from "./styles";
 
 @SettingsDecorator()
@@ -65,7 +66,7 @@ export class ProductInfo extends PureComponent {
             </Left>
             <Body>
               <Title style={{ color: modalText.color }}>
-                Purchase
+                {this.props.product ? this.props.product.title : null}
               </Title>
             </Body>
             {Platform.OS === "ios"
@@ -74,27 +75,39 @@ export class ProductInfo extends PureComponent {
                     onPress={this.props.onRight}
                     style={{ backgroundColor: "transparent" }}
                   >
-                    <Icon color={modalText.color} name="ios-more" />
+                    <Icon style={{ color: modalText.color }} name="ios-more" />
                   </Button>
                 </Right>
               : <Right />}
           </Header>
           <Content style={{ maxWidth: Dimensions.get("window").width }}>
-            <ProductHeader
+            <Spacer />
+            <ProductSubtitle style={title}>
+              {this.props.product ? this.props.product.subtitle : null}
+            </ProductSubtitle>
+            <Spacer />
+            <ProductSquare
               style={{
+                borderRadius: 20,
+                borderWidth: 4,
+                borderBottomWidth: 0,
+                borderRightWidth: 0,
+                borderColor: "rgba(255, 255, 255, 0.15)",
                 backgroundColor: this.props.product
                   ? this.props.product.color
                   : "transparent"
               }}
             >
-              <ProductTitle style={{ color: buttonText.color }}>
-                {this.props.product ? this.props.product.title : null}
-              </ProductTitle>
-            </ProductHeader>
+              <ProductImage
+                resizeMode="contain"
+                source={this.props.product ? this.props.product.image : null}
+              />
+            </ProductSquare>
             <Spacer />
-            <ProductDescription style={{ color: text.color }}>
+            <ProductBody style={title}>
               {this.props.product ? this.props.product.description : null}
-            </ProductDescription>
+            </ProductBody>
+            <Spacer />
             <Spacer />
             <Center>
               <PurchaseButton onPress={this.props.complete} style={button}>

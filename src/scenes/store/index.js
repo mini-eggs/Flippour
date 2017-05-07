@@ -110,7 +110,7 @@ export class StoreScene extends PureComponent {
   };
 
   render() {
-    const { container, title } = this.props.settings.theme;
+    const { container, title, buttonText } = this.props.settings.theme;
     const colors = this.props.gameColors[this.props.settings.themeName];
 
     // just testing for now
@@ -126,7 +126,7 @@ export class StoreScene extends PureComponent {
                 onPress={this.showProduct(testProduct)}
                 color={colors[testProduct.color]}
               >
-                <Span>
+                <Span style={{ color: buttonText.color }}>
                   {testProduct.title}
                 </Span>
               </SingleSquare>

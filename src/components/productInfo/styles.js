@@ -7,26 +7,6 @@ export const Center = Styled.View`
   align-items: center;
 `;
 
-export const ProductTitle = Styled.Text`
-  font-size: 48;
-  text-align: center;
-  font-weight: 600;
-`;
-
-export const ProductHeader = Styled.View`
-  justify-content: center;
-  align-items: center;
-  flex: 1
-  height: ${Dimensions.get("window").height / 4};
-`;
-
-export const ProductDescription = Styled.Text`
-  font-size: 24;
-  text-align: left;
-  padding-left: 25;
-  padding-right: 25;
-`;
-
 export const Spacer = Styled.View`
   height: 50;
 `;
@@ -34,12 +14,37 @@ export const Spacer = Styled.View`
 export const PurchaseButton = Styled.TouchableOpacity`
   border-radius: 1000;
   padding: 10;
+  padding-left: 15;
+  padding-right: 15;
   min-width: 200;
-  margin-bottom: 15;
 `;
 
 export const Span = Styled.Text` 
   font-size: 20;
   color: white;
   text-align: center;
+`;
+
+export const ProductSubtitle = Styled.Text`
+  font-size: 24;
+  text-align: center;
+  padding-left: 50;
+  padding-right: 50;
+`;
+
+export const ProductSquare = Styled.View`
+  align-self: center;
+`;
+
+export const ProductImage = Styled.Image`
+  width: ${Dimensions.get("window").width / 3 - 50};
+  height: ${Dimensions.get("window").width / 3 - 50};
+  margin: 25;
+`;
+
+export const ProductBody = Styled.Text`
+  font-size: 18;
+  text-align: center;
+  padding-left: 50;
+  padding-right: 50;
 `;
