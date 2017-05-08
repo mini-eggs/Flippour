@@ -47,7 +47,12 @@ export class ProductInfo extends PureComponent {
         visible={this.props.show}
         transparent={false}
       >
-        <Container style={container}>
+        <Container
+          style={{
+            ...container,
+            paddingBottom: Platform.OS === "ios" ? 0 : 22
+          }}
+        >
           <Header style={modal}>
             <Left>
               <Button
