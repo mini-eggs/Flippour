@@ -12,7 +12,7 @@ Flippour starts with ten seconds to complete each level. Each ten levels the tim
 4. Sounds
 5. Settings (sounds, username, themes)
 6. iOS in-app purchases and Android billing
-7. + more I cannot recall at the moment
+7. Plus more I cannot recall at the moment
 
 #### Roadmap, next app store release details and additions
 
