@@ -28,7 +28,7 @@ Flippour starts with ten seconds to complete each level. Each ten levels the tim
 
 #### Android Screenshots
 
-![](https://github.com/mini-eggs/Flippour/raw/master/artwork/screenshots/readme/android_scenes.png)
+![](https://github.com/mini-eggs/Flippour/raw/master/artwork/screenshots/readme/android_screens.png)
 
 #### Themes
 
