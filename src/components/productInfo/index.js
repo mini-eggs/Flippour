@@ -45,14 +45,9 @@ export class ProductInfo extends PureComponent {
       <Modal
         animationType={"slide"}
         visible={this.props.show}
-        transparent={false}
+        transparent={true}
       >
-        <Container
-          style={{
-            ...container,
-            paddingBottom: Platform.OS === "ios" ? 0 : 22
-          }}
-        >
+        <Container style={container}>
           <Header style={modal}>
             <Left>
               <Button
