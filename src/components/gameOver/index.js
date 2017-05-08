@@ -97,7 +97,7 @@ export class GameOver extends PureComponent {
             <Center>
               <CustomButton onPress={this.saveUsername} style={button}>
                 <Span style={buttonText}>
-                  CONTINUE
+                  Continue
                 </Span>
               </CustomButton>
               <Spacer />

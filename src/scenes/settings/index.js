@@ -160,7 +160,7 @@ export class SettingsScene extends PureComponent {
           <Center>
             <Button onPress={this.saveSettings} style={button}>
               <Span style={buttonText}>
-                SAVE
+                Save
               </Span>
             </Button>
           </Center>
