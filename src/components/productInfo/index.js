@@ -108,7 +108,6 @@ export class ProductInfo extends PureComponent {
               {this.props.product ? this.props.product.description : null}
             </ProductBody>
             <Spacer />
-            <Spacer />
             <Center>
               <PurchaseButton onPress={this.props.complete} style={button}>
                 <Span style={buttonText}>

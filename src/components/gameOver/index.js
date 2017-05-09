@@ -60,7 +60,7 @@ export class GameOver extends PureComponent {
       <Modal
         animationType={"slide"}
         visible={this.props.show}
-        transparent={false}
+        transparent={true}
       >
         <Container style={container}>
           <Header style={modal}>
