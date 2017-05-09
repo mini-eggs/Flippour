@@ -59,10 +59,11 @@ export class StoreScene extends PureComponent {
       if (aError.isFlippourError(err)) {
         Alert.alert("Error", err.message);
       } else {
-        Alert.alert("Error", aError.generalError(), {
-          text: "OK",
-          onPress: () => this.closeProduct()
-        });
+        // this could simply be the user exiting during the checkout process
+        // Alert.alert("Error", aError.generalError(), {
+        //   text: "OK",
+        //   onPress: () => this.closeProduct()
+        // });
       }
     }
   };
