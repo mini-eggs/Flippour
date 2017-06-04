@@ -38,9 +38,14 @@ export class SingleSquare extends PureComponent {
   }
 
   onPress = () => {
-    setImmediate(() => {
-      this.props.onSquareClick(this.props.x, this.props.y);
-    });
+    // It seems this will execute before native communication
+    // but after current JavaScript execution.
+    // We want this to execute immaditely as this is an
+    // important UI action. We may neet to visit this later
+    // if optimizations should be done.
+    // setImmediate(() => {
+    this.props.onSquareClick(this.props.x, this.props.y);
+    // });
   };
 
   render = () => {
