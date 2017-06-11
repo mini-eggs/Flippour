@@ -1,46 +1,41 @@
-import React, { Component } from "react";
-import { Scene, Router, Actions, ActionConst } from "react-native-router-flux";
+import React, { PureComponent } from "react";
+import { View } from "react-native";
+import { StackNavigator } from "react-navigation";
 import { SettingsDecorator } from "../decorators/settings";
 import { StartScene as Start } from "../scenes/start";
 import { GameContainer as Game } from "../containers/game";
-import { RecentContainer as Recent } from "../containers/recent";
 import { HighScoresContainer as HighScores } from "../containers/highscores";
 import { SettingsScene as Settings } from "../scenes/settings";
 import { StoreScene as Store } from "../scenes/store";
 
-/*
-      Okay, listen up.
-      We're going to do something nasty.
-      We're going to override `Actions.pop` with
-      `Actions.start`. This is BAD, but react-native-router-flux,
-      as awesome as it is, can't properly unmount a component
-      and using InteractionManager.runAfterInteractions HURTS
-      performance. I just don't give a hoot my dude.
-*/
+function getScene(screen) {
+  return {
+    screen: screen,
+    navigationOptions: {
+      header: null
+    }
+  };
+}
 
-Actions.pop = () => Actions.start({ type: ActionConst.RESET });
+const Navigator = StackNavigator({
+  Start: getScene(Start),
+  Game: getScene(Game),
+  HighScores: getScene(HighScores),
+  Settings: getScene(Settings),
+  Store: getScene(Store)
+});
 
 @SettingsDecorator()
-export class RoutingLayer extends Component {
+export class RoutingLayer extends PureComponent {
   render() {
+    const containerStyles = {
+      backgroundColor: this.props.settings.theme.container.backgroundColor,
+      flex: 1
+    };
     return (
-      <Router
-        getSceneStyle={() => {
-          return {
-            backgroundColor: this.props.settings.theme.container.backgroundColor
-          };
-        }}
-      >
-        <Scene key="root">
-          <Scene hideNavBar key="start" component={Start} />
-          <Scene hideNavBar key="game" component={Game} panHandlers={null} />
-          <Scene hideNavBar key="recent" component={Recent} />
-          <Scene hideNavBar key="highscores" component={HighScores} />
-          {/*note: settings key conflicts with a decorator props*/}
-          <Scene hideNavBar key="settingsKey" component={Settings} />
-          <Scene hideNavBar key="store" component={Store} />
-        </Scene>
-      </Router>
+      <View style={containerStyles}>
+        <Navigator />
+      </View>
     );
   }
 }
